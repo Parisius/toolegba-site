@@ -1,0 +1,411 @@
+{
+  "nav": {
+    "accueil": "Home",
+    "agence": "About us",
+    "services": "Our Services",
+    "realisations": "Portfolio",
+    "contact": "Contact"
+  },
+  "bottomBar": {
+    "scrollToExplore": "Scroll to explore"
+  },
+  "hero": {
+    "slides": [
+      {
+        "word": "We Take Charge Of:",
+        "definition": null,
+        "caption": "With a presence in at least six African countries since 2014."
+      },
+      {
+        "word": "Trade Marketing",
+        "definition": null,
+        "caption": "Building and animating your distribution network: your points of sale visible, animated, tracked."
+      },
+      {
+        "word": "Operational Marketing",
+        "definition": null,
+        "caption": "Activations that get the field moving, so your brand is where the consumer is."
+      },
+      {
+        "word": "Customers Services",
+        "definition": null,
+        "caption": "Direct contact with the consumer — where classic mass media no longer moves the needle."
+      },
+      {
+        "word": "Public Relations",
+        "definition": null,
+        "caption": "Building, defending and elevating a reputation that inspires trust."
+      },
+      {
+        "word": "Distribution",
+        "definition": null,
+        "caption": "From stock to shelf: supply, reseller networks, and after-sales support across the territory."
+      },
+      {
+        "word": "Social Media",
+        "definition": null,
+        "caption": "Digital strategy, community management and content creation to make your brand visible online too."
+      }
+    ],
+    "closing": {
+      "eyebrow": "We are",
+      "tagline": "Trust us with your KPIs.",
+      "ctaPrimary": "Let's start a project",
+      "ctaSecondary": "Our Case Studies"
+    }
+  },
+  "about": {
+    "overline": "About us",
+    "headline": "Built on the ground, since 2014.",
+    "body": "Toolègba is a pan-African BTL group, active across six West and Central African markets since 2014 — known as Hoope Africa until our 2025 rebrand. We started from a simple observation: classic mass media has shown its limits. Real impact comes from direct contact with the consumer. That's the strategy we've spent over a decade refining, backed by a team with 15+ years of combined experience in major ATL, BTL and TTL agencies.",
+    "link": "Learn more about the agency →"
+  },
+  "craft": {
+    "overline": "Our craft",
+    "headline": "Every campaign starts with real contact."
+  },
+  "difference": {
+    "overline": "The Toolègba Difference",
+    "headline": "Why It Matters for Your Brand",
+    "body": "A campaign is not a deliverable, it's contact with real people. It's the difference between an activation nobody remembers and one that moves your market.",
+    "cards": {
+      "market": {
+        "title": "12+ Years Learning Your Market",
+        "text": "We've walked the points of sale in Cotonou, Abidjan and beyond since 2014. Local teams, local languages, real knowledge of how people actually shop and move — not a slide deck."
+      },
+      "team": {
+        "title": "One Team, Trained Local Resources",
+        "text": "In every country we operate, we rely on resources who know the local ecosystem — and we train and supervise them directly. No brief lost in translation."
+      },
+      "scoping": {
+        "title": "Honest Scoping. Not Overselling.",
+        "text": "Sometimes the answer is one well-placed activation. Sometimes it's a full distribution network build. We'll tell you which — we won't sell you mass media we don't believe still works."
+      },
+      "impact": {
+        "title": "Impact We Measure After the Fact",
+        "text": "Daily, weekly and monthly reports, tracked through our own field app. You see exactly what moved — agents recruited, POS deployed, visits made — not just what looked good on launch day."
+      }
+    }
+  },
+  "industries": {
+    "overline": "Industries",
+    "headline": "Trusted Across Key Sectors",
+    "body": "From telecom to banking to insurance, the sectors where trade marketing and distribution execution matter most.",
+    "items": {
+      "telecom": "Telecom",
+      "banque": "Banking",
+      "transfert": "Money Transfer",
+      "assurance": "Insurance",
+      "agro": "Food & Beverage"
+    },
+    "link": "Talk about your industry"
+  },
+  "realisationsSection": {
+    "overline": "Case Studies",
+    "headline": "Selected work, across six countries.",
+    "body": "Real results for real clients — MTN, Ecobank and more — from Cotonou to Dakar.",
+    "mapLabel": "Where we work — hover a country",
+    "portfolioLink": "View full portfolio →"
+  },
+  "realisationsPage": {
+    "overline": "Selected Work · In Depth",
+    "headline": "Six campaigns. Six different markets.",
+    "body": "Every market has its own codes. Discover the strategy and on-the-ground execution behind results we can put a number on."
+  },
+  "realisations": {
+    "benin": {
+      "countryLabel": "Benin",
+      "city": "Cotonou",
+      "title": "Ecobank Benin, Merchant Network",
+      "service": "Trade Marketing — Banking Network",
+      "description": "A long-standing Toolègba client, Ecobank Benin entrusted us with animating its distribution network. Our results on this contract earned Ecobank's trust in Togo, Guinea and Senegal too.",
+      "tags": [
+        "Trade marketing",
+        "Banking network",
+        "Multi-country"
+      ]
+    },
+    "cotedivoire": {
+      "countryLabel": "Ivory Coast",
+      "city": "Abidjan",
+      "title": "MTN Ivory Coast, Mobile Money Network",
+      "service": "Distribution — Agent Network",
+      "description": "Deployment and animation of MTN Ivory Coast's Mobile Money agent and merchant network, using the same model already proven elsewhere on the continent.",
+      "tags": [
+        "Distribution",
+        "Mobile Money",
+        "Agent network"
+      ]
+    },
+    "cameroun": {
+      "countryLabel": "Cameroon",
+      "city": "Douala",
+      "title": "Field Presence, Cameroon",
+      "service": "Consumer Services",
+      "description": "Our local team in Cameroon applies the same direct-consumer-contact approach that's built our reputation across the six countries where we operate.",
+      "tags": [
+        "Consumer services",
+        "Local presence"
+      ]
+    },
+    "guinee": {
+      "countryLabel": "Guinea",
+      "city": "Conakry",
+      "title": "Ecobank Guinea, Trade Marketing Rollout",
+      "service": "Trade Marketing — Banking Network",
+      "description": "Following our results in Benin, Ecobank entrusted us with animating its network in Guinea too, using the same method and execution standards.",
+      "tags": [
+        "Trade marketing",
+        "Banking network",
+        "Regional rollout"
+      ]
+    },
+    "togo": {
+      "countryLabel": "Togo",
+      "city": "Lomé",
+      "title": "Ecobank Togo, Trade Marketing Rollout",
+      "service": "Trade Marketing — Banking Network",
+      "description": "The same trusted contract renewed in Togo: field animation and distribution network development for Ecobank.",
+      "tags": [
+        "Trade marketing",
+        "Banking network",
+        "Regional rollout"
+      ]
+    },
+    "senegal": {
+      "countryLabel": "Senegal",
+      "city": "Dakar",
+      "title": "Mobile Money Network, Senegal",
+      "service": "Distribution — Agent & Merchant Network",
+      "description": "In three and a half years, we grew this network from 2,000 to 26,000 active agents and from 300 to 18,000 accepting merchants, creating more than 53,000 points of convergence along the way.",
+      "tags": [
+        "Distribution",
+        "Mobile Money",
+        "Network growth"
+      ]
+    }
+  },
+  "agencePage": {
+    "hero": {
+      "overline": "Agency",
+      "headline": "On a mission to become Africa's biggest BTL agency.",
+      "body": "Toolègba has run BTL campaigns across Africa since 2014 — as Hoope Africa until our 2025 rebrand. Today, under the Toolègba name, we help partners hit their KPIs through trade marketing and event-driven actions, backed by owned logistics, trained local teams, and financial partnerships that let us commit fully to every campaign.",
+      "ctaPrimary": "Talk to the agency",
+      "ctaSecondary": "See our case studies"
+    },
+    "values": {
+      "overline": "Our Values",
+      "headline": "What Drives Us",
+      "body": "Three principles, non-negotiable on every campaign.",
+      "items": [
+        {
+          "title": "Rigor",
+          "text": "Every campaign follows a precise framework: clear objectives, tracked execution, nothing left to chance."
+        },
+        {
+          "title": "Discipline",
+          "text": "Constant field presence, backed by daily tracking and reporting tools."
+        },
+        {
+          "title": "Results",
+          "text": "We commit to KPIs, not promises. That's what we report back."
+        }
+      ]
+    },
+    "services": {
+      "overline": "Our Services",
+      "headline": "Five Disciplines, One Team on the Ground",
+      "body": "From trade marketing to distribution, every function your brand needs to move product and build presence.",
+      "link": "See all our services →"
+    },
+    "space": {
+      "overline": "Our Agency",
+      "headline": "Where It All Comes Together",
+      "body": "Our studio in Cotonou, where strategies take shape before heading to the field, across the six countries where we operate."
+    },
+    "team": {
+      "overline": "The Team",
+      "headline": "Small Team, Big Ambition",
+      "body": "A multidisciplinary team of strategists, creatives and field specialists who genuinely love what they build.",
+      "members": [
+        {
+          "name": "Aïcha Toko",
+          "role": "Managing Director"
+        },
+        {
+          "name": "Kokou Mensah",
+          "role": "Strategy Direction"
+        },
+        {
+          "name": "Fatou Adjovi",
+          "role": "Creative Direction"
+        },
+        {
+          "name": "Yawo Koffi",
+          "role": "Trade Marketing Lead"
+        },
+        {
+          "name": "Chidinma Osei",
+          "role": "Digital Lead"
+        },
+        {
+          "name": "Bertrand Houngbo",
+          "role": "Accounts Lead"
+        }
+      ]
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "overline": "Contact",
+      "headline": "Let's talk about your next campaign.",
+      "body": "Tell us about your project. No pressure, just a conversation about what's possible."
+    },
+    "infoBar": {
+      "email": "Email",
+      "phone": "Phone",
+      "office": "Office",
+      "hours": "Hours"
+    },
+    "form": {
+      "overline": "Inquiry",
+      "headline": "Tell us about your project",
+      "labels": {
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "phone": "Phone",
+        "service": "Project Type",
+        "budget": "Estimated Budget",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "company": "Company name",
+        "email": "you@company.com",
+        "phone": "+229 01 97 05 05 05",
+        "message": "Tell us about your project..."
+      },
+      "serviceOptionsPlaceholder": "Choose a type",
+      "budgetOptionsPlaceholder": "Choose a range",
+      "budgetOptions": [
+        "Under 1M FCFA",
+        "1M – 5M FCFA",
+        "5M – 15M FCFA",
+        "15M FCFA and above",
+        "Not sure yet"
+      ],
+      "otherOption": "Other",
+      "consent": "I agree that this information will only be used to respond to my request.",
+      "submit": "Send Inquiry",
+      "note": "We respond within 24 hours · No spam, ever",
+      "thanksTitle": "Thank you!",
+      "thanksBody": "Your message has been received. We'll get back to you within 24 hours."
+    },
+    "stats": [
+      {
+        "value": "12+ years",
+        "label": "Running BTL campaigns across Africa"
+      },
+      {
+        "value": "6 countries",
+        "label": "Active today, 9 by 2026"
+      },
+      {
+        "value": "15+ years",
+        "label": "Combined team experience"
+      }
+    ],
+    "faq": {
+      "overline": "FAQ",
+      "headline": "Common Questions",
+      "items": [
+        {
+          "q": "What happens after I submit?",
+          "a": "A team member will contact you within 24 hours to understand your needs and plan a first conversation, by phone or at the agency."
+        },
+        {
+          "q": "How long does a typical project take?",
+          "a": "A one-off activation can launch within a few weeks. A full distribution network build usually takes six to twelve weeks, from strategy to reporting."
+        },
+        {
+          "q": "What's included in a quote?",
+          "a": "Every quote details the proposed strategy, deliverables, timeline and media or field costs, with no hidden fees."
+        },
+        {
+          "q": "Do you work with small businesses?",
+          "a": "Yes. We scale the scope to your budget, whether it's a local activation or a regional campaign across our six markets."
+        }
+      ]
+    }
+  },
+  "siteInfo": {
+    "email": "ecoute@toolegba.com",
+    "phone": "+229 01 97 05 05 05",
+    "phoneHref": "+2290197050505",
+    "phoneCountry": "Benin",
+    "phoneCI": "+225 05 95 05 05 05",
+    "phoneCIHref": "+2250595050505",
+    "phoneCICountry": "Ivory Coast",
+    "website": "toolegba.com",
+    "addressShort": "Cotonou, Benin",
+    "addressFull": "Cotonou, Benin — active in Ivory Coast, Cameroon, Guinea Conakry, Togo & Senegal",
+    "hours": "Mon – Fri, 8am – 6pm",
+    "tagline": "Trust us with your KPIs.",
+    "footerAbout": "A pan-African BTL group building trade marketing and distribution results since 2014, across six West and Central African markets.",
+    "footerCta": "Let's talk about your project. No pressure, just a conversation.",
+    "talkToAgency": "Talk to the agency",
+    "getQuote": "Get a quote",
+    "quickLinks": {
+      "home": "Home",
+      "services": "Services",
+      "realisations": "Case Studies",
+      "agence": "Agency",
+      "contact": "Contact"
+    },
+    "footerQuickLinksHeading": "Quick Links",
+    "footerServicesHeading": "Services",
+    "footerStudioHeading": "Studio & Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "allRightsReserved": "All rights reserved."
+  },
+  "services": {
+    "trade": {
+      "word": "Trade Marketing",
+      "definition": null,
+      "title": "Trade Marketing",
+      "text": "Prospecting, building and animating your distribution network: point-of-sale visibility, POS materials, competitive monitoring."
+    },
+    "operationnel": {
+      "word": "Operational Marketing",
+      "definition": null,
+      "title": "Operational Marketing",
+      "text": "Market activations, podium trucks, club animations and events that strengthen your presence on the ground."
+    },
+    "consumer": {
+      "word": "Consumer",
+      "definition": null,
+      "title": "Consumer Services",
+      "text": "Direct contact with the consumer: outreach, recruitment, sales and advice — where classic media no longer moves the needle."
+    },
+    "rp": {
+      "word": "Public Relations",
+      "definition": null,
+      "title": "Public Relations",
+      "text": "Building, defending and elevating your brand's reputation with the audiences that matter."
+    },
+    "distribution": {
+      "word": "Distribution",
+      "definition": null,
+      "title": "Distribution",
+      "text": "From supply to sale: stock management, reseller networks, customer service and after-sales support, nationwide."
+    },
+    "social": {
+      "word": "Social Media",
+      "definition": null,
+      "title": "Social Media",
+      "text": "Digital strategy, community management and content creation that extend your visibility online."
+    }
+  }
+}
