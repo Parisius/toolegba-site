@@ -28,7 +28,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored === "en" || stored === "fr") setLangState(stored);
     } catch {
-      // localStorage unavailable (private mode, etc.) — fall back to default.
+      // localStorage unavailable (private mode, etc.) - fall back to default.
     }
   }, []);
 
@@ -41,7 +41,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     try {
       window.localStorage.setItem(STORAGE_KEY, next);
     } catch {
-      // Ignore write failures — language still works for this session.
+      // Ignore write failures - language still works for this session.
     }
   };
 

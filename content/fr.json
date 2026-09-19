@@ -57,7 +57,7 @@
   "about": {
     "overline": "À propos",
     "headline": "Construit sur le terrain, depuis 2014.",
-    "body": "Toolègba est un groupe panafricain BTL, actif dans six marchés d'Afrique de l'Ouest et Centrale depuis 2014 — connu sous le nom Hoope Africa jusqu'à notre rebranding en 2025. Nous sommes partis d'un constat simple : les médias classiques ont montré leurs limites. Le vrai impact vient du contact direct avec le consommateur. C'est la stratégie que nous perfectionnons depuis plus de dix ans, portée par une équipe forte de plus de 15 ans d'expérience combinée dans de grandes agences ATL, BTL et TTL.",
+    "body": "Toolègba est un groupe panafricain BTL, actif dans six marchés d'Afrique de l'Ouest et Centrale depuis 2014. Nous étions connu sous le nom Hoope Africa jusqu'à notre rebranding en 2025. Nous sommes partis d'un constat simple : les médias classiques ont montré leurs limites. Le vrai impact vient du contact direct avec le consommateur. C'est la stratégie que nous perfectionnons depuis plus de dix ans, portée par une équipe forte de plus de 15 ans d'expérience combinée dans de grandes agences ATL, BTL et TTL.",
     "link": "En savoir plus sur l'agence →"
   },
   "craft": {
@@ -71,19 +71,19 @@
     "cards": {
       "market": {
         "title": "Plus de 12 ans à Apprendre Votre Marché",
-        "text": "Nous arpentons les points de vente à Cotonou, Abidjan et au-delà depuis 2014. Équipes locales, langues locales, une vraie connaissance de la façon dont les gens achètent et se déplacent — pas un PowerPoint."
+        "text": "Nous arpentons les points de vente à Cotonou, Abidjan et au-delà depuis 2014. Équipes locales, langues locales, une vraie connaissance de la façon dont les gens achètent et se déplacent."
       },
       "team": {
         "title": "Une Équipe, Des Ressources Locales Formées",
-        "text": "Dans chaque pays où nous opérons, nous nous appuyons sur des ressources qui maîtrisent l'écosystème local — que nous formons et encadrons directement. Aucun brief perdu en traduction."
+        "text": "Dans chaque pays où nous opérons, nous nous appuyons sur des ressources qui maîtrisent l'écosystème local, que nous formons et encadrons directement."
       },
       "scoping": {
         "title": "Un Cadrage Honnête. Jamais de Survente.",
-        "text": "Parfois la réponse est une activation bien placée. Parfois c'est la construction d'un réseau de distribution complet. Nous vous dirons laquelle — nous ne vous vendrons pas des médias de masse auxquels nous ne croyons plus."
+        "text": "Parfois la réponse est une activation bien placée. Parfois c'est la construction d'un réseau de distribution complet. Nous ne vous vendrons pas des médias de masse auxquels nous ne croyons plus."
       },
       "impact": {
         "title": "Un Impact Mesuré Après Coup",
-        "text": "Rapports quotidiens, hebdomadaires et mensuels, suivis via notre propre application terrain. Vous voyez exactement ce qui a bougé — agents recrutés, PDV déployés, visites réalisées — pas seulement ce qui avait l'air bien le jour du lancement."
+        "text": "Rapports quotidiens, hebdomadaires et mensuels, suivis via notre propre application terrain. Vous voyez exactement ce qui a bougé : agents recrutés, PDV déployés, visites réalisées. Pas seulement ce qui avait l'air bien le jour du lancement."
       }
     }
   },
@@ -103,8 +103,8 @@
   "realisationsSection": {
     "overline": "Réalisations",
     "headline": "Une sélection de projets, dans six pays.",
-    "body": "De vrais résultats pour de vrais clients — MTN, Ecobank et d'autres — de Cotonou à Dakar.",
-    "mapLabel": "Où nous intervenons — survolez un pays",
+    "body": "De vrais résultats pour de vrais clients MTN, Ecobank et d'autres ; de Cotonou à Dakar.",
+    "mapLabel": "Pays où nous intervenons.",
     "portfolioLink": "Voir tout le portfolio →"
   },
   "realisationsPage": {
@@ -117,7 +117,7 @@
       "countryLabel": "Bénin",
       "city": "Cotonou",
       "title": "Ecobank Bénin, Réseau Marchands",
-      "service": "Trade Marketing — Réseau Bancaire",
+      "service": "Trade Marketing : Réseau Bancaire",
       "description": "Client historique de Toolègba, Ecobank Bénin nous a confié l'animation de son réseau de distribution. Nos performances sur ce contrat nous ont valu la confiance d'Ecobank au Togo, en Guinée et au Sénégal.",
       "tags": [
         "Trade Marketing",
@@ -129,7 +129,7 @@
       "countryLabel": "Côte d'Ivoire",
       "city": "Abidjan",
       "title": "MTN Côte d'Ivoire, Réseau Mobile Money",
-      "service": "Distribution — Réseau Agents",
+      "service": "Distribution : Réseau Agents",
       "description": "Déploiement et animation du réseau d'agents et marchands Mobile Money pour MTN Côte d'Ivoire, avec le même modèle qui a déjà fait ses preuves ailleurs sur le continent.",
       "tags": [
         "Distribution",
@@ -152,7 +152,7 @@
       "countryLabel": "Guinée",
       "city": "Conakry",
       "title": "Ecobank Guinée, Extension Trade Marketing",
-      "service": "Trade Marketing — Réseau Bancaire",
+      "service": "Trade Marketing : Réseau Bancaire",
       "description": "Après nos résultats au Bénin, Ecobank nous a confié l'animation de son réseau en Guinée, avec la même méthode et les mêmes standards d'exécution.",
       "tags": [
         "Trade Marketing",
@@ -164,7 +164,7 @@
       "countryLabel": "Togo",
       "city": "Lomé",
       "title": "Ecobank Togo, Extension Trade Marketing",
-      "service": "Trade Marketing — Réseau Bancaire",
+      "service": "Trade Marketing : Réseau Bancaire",
       "description": "Le même contrat de confiance renouvelé au Togo : animation terrain et développement du réseau de distribution pour Ecobank.",
       "tags": [
         "Trade Marketing",
@@ -176,7 +176,7 @@
       "countryLabel": "Sénégal",
       "city": "Dakar",
       "title": "Réseau Mobile Money, Sénégal",
-      "service": "Distribution — Réseau Agents & Marchands",
+      "service": "Distribution : Réseau Agents & Marchands",
       "description": "En trois ans et demi, nous avons fait passer ce réseau de 2 000 à 26 000 agents actifs et de 300 à 18 000 marchands accepteurs, avec plus de 53 000 points de convergence créés.",
       "tags": [
         "Distribution",
@@ -189,7 +189,7 @@
     "hero": {
       "overline": "Agence",
       "headline": "En route vers le titre de plus grande agence BTL d'Afrique.",
-      "body": "Toolègba mène des campagnes BTL en Afrique depuis 2014 — sous le nom Hoope Africa jusqu'à notre rebranding en 2025. Aujourd'hui, sous le nom Toolègba, nous accompagnons nos partenaires vers leurs KPI à travers des actions trade et événementielles, avec une logistique en propre, des équipes locales formées, et des partenariats financiers qui nous permettent de nous engager pleinement sur chaque campagne.",
+      "body": "Toolègba mène des campagnes BTL en Afrique depuis 2014. Connu sous le nom Hoope Africa jusqu'à notre rebranding en 2025, aujourd'hui, sous le nom Toolègba, nous accompagnons nos partenaires vers la réalisations de leurs objectif à travers des actions trade et événementielles, avec une logistique en propre, des équipes locales formées, et des partenariats financiers qui nous permettent de nous engager pleinement sur chaque campagne.",
       "ctaPrimary": "Discuter avec l'agence",
       "ctaSecondary": "Voir nos réalisations"
     },
@@ -214,7 +214,7 @@
     },
     "services": {
       "overline": "Nos Services",
-      "headline": "Cinq Disciplines, Une Seule Équipe Terrain",
+      "headline": "Six Disciplines, Une Seule Équipe Terrain",
       "body": "Du trade marketing à la distribution, chaque fonction dont votre marque a besoin pour vendre et être visible.",
       "link": "Voir tous nos services →"
     },
@@ -349,7 +349,7 @@
     "phoneCICountry": "Côte d'Ivoire",
     "website": "toolegba.com",
     "addressShort": "Cotonou, Bénin",
-    "addressFull": "Cotonou, Bénin — active en Côte d'Ivoire, au Cameroun, en Guinée Conakry, au Togo et au Sénégal",
+    "addressFull": "Cotonou, Bénin ;  actif en Côte d'Ivoire, au Cameroun, en Guinée Conakry, au Togo et au Sénégal",
     "hours": "Lun – Ven, 8h – 18h",
     "tagline": "Confiez-nous vos KPI.",
     "footerAbout": "Un groupe panafricain BTL qui construit des résultats trade marketing et distribution depuis 2014, dans six marchés d'Afrique de l'Ouest et Centrale.",

@@ -32,7 +32,7 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Toolègba — Groupe Panafricain BTL",
+  title: "Toolègba | Groupe Panafricain BTL",
   description:
     "Toolègba, groupe panafricain BTL actif depuis 2014 au Bénin, en Côte d'Ivoire, au Cameroun, en Guinée Conakry, au Togo et au Sénégal. Trade marketing, distribution et activation terrain.",
 };

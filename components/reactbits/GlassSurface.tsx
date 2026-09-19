@@ -7,11 +7,11 @@ export interface GlassSurfaceProps {
   className?: string;
   style?: CSSProperties;
   /** When false, the backdrop filter is disabled entirely (fully see-through,
-   * no distortion) — lets a single persistent element toggle the effect on
+   * no distortion) - lets a single persistent element toggle the effect on
    * and off without swapping DOM nodes, so other CSS transitions on the
    * same element keep working. */
   active?: boolean;
-  /** Frost strength — higher blurs the content showing through. */
+  /** Frost strength - higher blurs the content showing through. */
   blur?: number;
   /** Strength of the liquid-glass refraction distortion. */
   distortionScale?: number;

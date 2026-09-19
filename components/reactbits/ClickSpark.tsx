@@ -21,7 +21,7 @@ interface Spark {
 
 /**
  * Site-wide adaptation of reactbits.dev's Click Spark. The vendor version
- * wraps a piece of content directly and sizes its canvas to that wrapper —
+ * wraps a piece of content directly and sizes its canvas to that wrapper -
  * fine for a demo box, but wrapping this entire page would mean one canvas
  * as tall as the whole scrollable site (the hero stack alone is ~8 screens).
  * This version is a fixed, viewport-sized overlay instead: it listens for

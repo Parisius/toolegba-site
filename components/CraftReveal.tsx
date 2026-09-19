@@ -69,7 +69,7 @@ export default function CraftReveal() {
         </p>
       </motion.div>
 
-      {/* Cursor glow drawn as its own top layer, over the image/caption above —
+      {/* Cursor glow drawn as its own top layer, over the image/caption above -
           trackWindow + pointer-events-none so it never blocks the content
           underneath while still following the mouse. */}
       <GlowCursor

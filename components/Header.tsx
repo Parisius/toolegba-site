@@ -50,7 +50,7 @@ export default function Header() {
     { label: dict.nav.contact, href: "/contact" },
   ];
 
-  // Only the homepage has a tall hero to scroll past — everywhere else the
+  // Only the homepage has a tall hero to scroll past - everywhere else the
   // header always sits in its floating, "past hero" style.
   const pastHero = isHome ? scrolledPastHero : true;
 

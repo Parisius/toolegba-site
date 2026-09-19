@@ -15,7 +15,7 @@ interface SlideMeta {
   size?: string;
 }
 
-// Per-slide presentation details that aren't translatable text — paired by
+// Per-slide presentation details that aren't translatable text - paired by
 // index with the dictionary's hero.slides array.
 const SLIDE_META: SlideMeta[] = [
   { lightfall: true, size: "text-[clamp(2.25rem,7vw,5.5rem)]" },
@@ -36,12 +36,12 @@ function advance() {
   window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
 }
 
-// The sticky article itself stays an untouched, full h-screen box — that
+// The sticky article itself stays an untouched, full h-screen box - that
 // geometry is exactly what makes the stacking/covering illusion work, so it
 // must never be resized or margined. The inset "framed card" look instead
 // comes from an absolutely-positioned INNER wrapper, which has zero effect
 // on document flow. The gap it leaves on every side (top, sides, AND
-// bottom) reveals the <section>'s own bg-ivoire — the same light tone used
+// bottom) reveals the <section>'s own bg-ivoire - the same light tone used
 // on the footer.
 const OUTER = "sticky top-0 h-screen w-full cursor-pointer bg-ivoire";
 const INNER = "absolute inset-3 overflow-hidden rounded-[28px] md:inset-4";

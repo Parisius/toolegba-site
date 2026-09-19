@@ -14,7 +14,7 @@ export default function ScrollRevealText({
   const { scrollYProgress } = useScroll({
     target: ref,
     // Reveal starts as soon as the paragraph's top edge enters the viewport
-    // and finishes once it's nearly reached the top — spread across a wider
+    // and finishes once it's nearly reached the top - spread across a wider
     // scroll distance so the word-by-word effect reads clearly.
     offset: ["start 1", "start 0.1"],
   });

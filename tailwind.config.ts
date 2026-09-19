@@ -8,9 +8,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Toolègba brand tokens — from the official charte graphique
-        petrole: "#2C3D4F", // bleu pétrole — primary dark
-        corail: "#E54E3E", // rouge corail — primary accent
+        // Toolègba brand tokens - from the official charte graphique
+        petrole: "#2C3D4F", // bleu pétrole - primary dark
+        corail: "#E54E3E", // rouge corail - primary accent
         bordeaux: "#7F2B2B",
         orange: "#FFAF5C", // or orangé
         rougevif: "#D11A1B",

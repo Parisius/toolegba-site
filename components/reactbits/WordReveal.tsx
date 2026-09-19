@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 /**
  * Reveals a heading word by word, automatically, the moment it scrolls into
- * view — no hover, no scroll-scrubbing. Pass `key={text}` from the parent
+ * view - no hover, no scroll-scrubbing. Pass `key={text}` from the parent
  * if the text can change (e.g. a language switch) so it replays cleanly.
  */
 export default function WordReveal({

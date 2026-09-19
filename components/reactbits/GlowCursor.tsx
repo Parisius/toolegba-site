@@ -27,7 +27,7 @@ export interface GlowCursorProps extends Omit<HTMLAttributes<HTMLDivElement>, 'c
   blendMode?: BlendMode;
   maxDevicePixelRatio?: number;
   enabled?: boolean;
-  /** Track pointer position from window instead of this element — for use as a
+  /** Track pointer position from window instead of this element - for use as a
    * non-blocking fixed overlay above content that must stay clickable. */
   trackWindow?: boolean;
   children?: ReactNode;

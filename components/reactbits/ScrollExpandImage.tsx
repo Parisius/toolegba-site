@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 /**
- * Adaptation of reactbits.dev's "Scroll Expand" — the image starts narrower
+ * Adaptation of reactbits.dev's "Scroll Expand" - the image starts narrower
  * and more rounded, then widens to fill its outer container as it scrolls
  * up through the viewport. Animates actual width (not just a scale
  * transform) so it visibly grows wider, not just zoomed. Purely

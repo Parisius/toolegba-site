@@ -206,7 +206,7 @@ function RealisationCard({
             </p>
           </div>
           <p className="mt-2.5 text-xs text-white/50">
-            {realisation.flag} {text.countryLabel} — {text.city}
+            {realisation.flag} {text.countryLabel}, {text.city}
           </p>
         </div>
 
@@ -263,7 +263,7 @@ export default function RealisationsSection() {
           </p>
         </ScrollReveal>
 
-        {/* Filmstrip — snap-scrolling, one card per country. Hovering a card
+        {/* Filmstrip - snap-scrolling, one card per country. Hovering a card
             also highlights the matching country on the map below. */}
         <div className="relative mt-14">
           <div
@@ -284,7 +284,7 @@ export default function RealisationsSection() {
           </div>
         </div>
 
-        {/* Map — full width, hovering a country shows a cursor-following
+        {/* Map - full width, hovering a country shows a cursor-following
             preview of its project right next to the pointer. */}
         <div className="mt-16">
           <p className="mb-6 text-xs uppercase tracking-wide text-petrole/50">
@@ -377,7 +377,7 @@ export default function RealisationsSection() {
               </div>
               <div className="p-2.5">
                 <p className="truncate text-[10px] text-petrole/60">
-                  {active.flag} {activeText.countryLabel} — {activeText.city}
+                  {active.flag} {activeText.countryLabel}, {activeText.city}
                 </p>
                 <p className="mt-1 truncate text-xs font-semibold text-petrole">
                   {activeText.title}

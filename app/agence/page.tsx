@@ -6,7 +6,7 @@ import AgenceSpace from "@/components/agence/AgenceSpace";
 import AgenceTeam from "@/components/agence/AgenceTeam";
 
 export const metadata: Metadata = {
-  title: "Agence — Toolègba",
+  title: "Agence | Toolègba",
   description:
     "Toolègba est un groupe panafricain BTL basé à Cotonou, actif depuis 2014 dans six pays d'Afrique de l'Ouest et Centrale. Découvrez nos valeurs, nos services et notre équipe.",
 };

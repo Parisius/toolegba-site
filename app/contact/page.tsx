@@ -7,7 +7,7 @@ import ContactStats from "@/components/contact/ContactStats";
 import FaqAccordion from "@/components/contact/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Contact — Toolègba",
+  title: "Contact | Toolègba",
   description:
     "Contactez Toolègba pour discuter de votre prochaine campagne de trade marketing ou de distribution au Bénin et en Afrique de l'Ouest.",
 };

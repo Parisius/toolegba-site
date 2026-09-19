@@ -7,7 +7,7 @@ import GlowCursor from "./reactbits/GlowCursor";
  * Ambient cursor-glow over the hero slide stack. Runs as a fixed,
  * viewport-sized overlay (not a child of the 8-screen-tall sticky stack)
  * so the WebGL canvas stays a single-viewport size regardless of scroll
- * position — matching the marker + scroll-listener pattern BottomBar and
+ * position - matching the marker + scroll-listener pattern BottomBar and
  * Header already use, rather than nesting inside the tall stack itself.
  */
 export default function HeroAmbientGlow() {

@@ -153,7 +153,7 @@ export default function CaseStudiesGrid() {
               </div>
               <div className="p-8">
                 <p className="text-xs uppercase tracking-wide text-petrole/50">
-                  {r.flag} {text.countryLabel} — {text.city}
+                  {r.flag} {text.countryLabel}, {text.city}
                 </p>
                 <WordReveal
                   key={text.title}
