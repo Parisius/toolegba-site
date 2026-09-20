@@ -34,9 +34,9 @@ function PhoneIcon() {
   );
 }
 
-function PinIcon() {
+function PinIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
       <path
         d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"
         stroke="currentColor"
@@ -144,8 +144,9 @@ export default function Footer() {
             <GlobeIcon /> {siteInfo.website}
           </span>
         </div>
-        <p className="mt-4 flex items-center justify-center gap-2 font-sans text-sm text-petrole/60">
-          <PinIcon /> {siteInfo.addressFull}
+        <p className="mx-auto mt-4 max-w-md text-center font-sans text-sm leading-relaxed text-petrole/60 md:max-w-none">
+          <PinIcon className="mr-1.5 inline-block h-5 w-5 -translate-y-px align-text-bottom text-corail" />
+          {siteInfo.addressFull}
         </p>
       </div>
 

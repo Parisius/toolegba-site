@@ -10,6 +10,7 @@ import { useDict } from "@/lib/language/LanguageProvider";
 import pictures from "@/content/picture.json";
 
 interface SlideMeta {
+  oneLine?: boolean;
   lightfall?: boolean;
   image?: string;
   size?: string;
@@ -18,7 +19,8 @@ interface SlideMeta {
 // Per-slide presentation details that aren't translatable text - paired by
 // index with the dictionary's hero.slides array.
 const SLIDE_META: SlideMeta[] = [
-  { lightfall: true, size: "text-[clamp(2.25rem,7vw,5.5rem)]" },
+  // Sized from the viewport (title is ~10.5em wide) so it never wraps, not even its colon.
+  { lightfall: true, oneLine: true, size: "[font-size:min(5.5rem,calc((100vw_-_4.5rem)/11.3))]" },
   { image: pictures.hero.trade },
   { image: pictures.hero.operationnel, size: "text-[clamp(2.25rem,6.5vw,5rem)]" },
   { image: pictures.hero.consumer, size: "text-[clamp(2.25rem,6.5vw,5rem)]" },
@@ -123,9 +125,9 @@ export default function HeroStack() {
                 </p>
               )}
               <h2
-                className={`mx-auto max-w-4xl font-display font-semibold leading-[0.95] text-white ${
-                  slide.size ?? "text-[clamp(2.75rem,9vw,7rem)]"
-                }`}
+                className={`mx-auto font-display font-semibold leading-[0.95] text-white ${
+                  slide.oneLine ? "w-full whitespace-nowrap" : "max-w-4xl"
+                } ${slide.size ?? "text-[clamp(2.75rem,9vw,7rem)]"}`}
               >
                 <TextType
                   key={slide.word}

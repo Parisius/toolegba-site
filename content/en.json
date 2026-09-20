@@ -2,7 +2,7 @@
   "nav": {
     "accueil": "Home",
     "agence": "About us",
-    "services": "Our Services",
+    "services": "Our services",
     "realisations": "Portfolio",
     "contact": "Contact"
   },
@@ -12,37 +12,37 @@
   "hero": {
     "slides": [
       {
-        "word": "We Take Charge Of:",
+        "word": "We take charge of:",
         "definition": null,
         "caption": "With a presence in at least six African countries since 2014."
       },
       {
-        "word": "Trade Marketing",
+        "word": "trade marketing",
         "definition": null,
         "caption": "Building and animating your distribution network: your points of sale visible, animated, tracked."
       },
       {
-        "word": "Operational Marketing",
+        "word": "operational marketing",
         "definition": null,
         "caption": "Activations that get the field moving, so your brand is where the consumer is."
       },
       {
-        "word": "Closeness to Your Customers",
+        "word": "closeness to your customers",
         "definition": null,
         "caption": "Direct contact with the consumer, where classic mass media no longer moves the needle."
       },
       {
-        "word": "Public Relations",
+        "word": "public relations",
         "definition": null,
         "caption": "Building, defending and elevating a reputation that inspires trust."
       },
       {
-        "word": "Distribution",
+        "word": "distribution",
         "definition": null,
         "caption": "From stock to shelf: supply, reseller networks, and after-sales support across the territory."
       },
       {
-        "word": "Social Media",
+        "word": "social media",
         "definition": null,
         "caption": "Digital strategy, community management and content creation to make your brand visible online too."
       }
@@ -51,7 +51,7 @@
       "eyebrow": "We are",
       "tagline": "Trust us with your KPIs.",
       "ctaPrimary": "Let's start a project",
-      "ctaSecondary": "Our Case Studies"
+      "ctaSecondary": "Our case studies"
     }
   },
   "about": {
@@ -65,50 +65,50 @@
     "headline": "Every campaign starts with real contact."
   },
   "difference": {
-    "overline": "The Toolègba Difference",
-    "headline": "Why It Matters for Your Brand",
+    "overline": "The Toolègba difference",
+    "headline": "Why it matters for your brand.",
     "body": "A campaign is not a deliverable, it's contact with real people. It's the difference between an activation nobody remembers and one that moves your market.",
     "cards": {
       "market": {
-        "title": "12+ Years Learning Your Market",
+        "title": "12+ years learning your market.",
         "text": "We've walked the points of sale in Cotonou, Abidjan and beyond since 2014. Local teams, local languages, real knowledge of how people actually shop and move."
       },
       "team": {
-        "title": "One Team, Trained Local Resources",
+        "title": "One team, trained local resources.",
         "text": "In every country where we operate, we rely on resources who master the local ecosystem, and whom we train and supervise directly."
       },
       "scoping": {
-        "title": "Honest Scoping. Not Overselling.",
+        "title": "Honest scoping. No overselling, ever.",
         "text": "Sometimes the answer is one well-placed activation. Sometimes it's a full distribution network build. We won't sell you mass media we no longer believe in."
       },
       "impact": {
-        "title": "Impact We Measure After the Fact",
+        "title": "Impact measured after the fact.",
         "text": "Daily, weekly and monthly reports, tracked through our own field app. You see exactly what moved: agents recruited, POS deployed, visits made, not just what looked good on launch day."
       }
     }
   },
   "industries": {
     "overline": "Industries",
-    "headline": "Trusted Across Key Sectors",
+    "headline": "Trusted across key sectors.",
     "body": "From telecom to banking to insurance, the sectors where trade marketing and distribution execution matter most.",
     "items": {
       "telecom": "Telecom",
       "banque": "Banking",
-      "transfert": "Money Transfer",
+      "transfert": "Money transfer",
       "assurance": "Insurance",
-      "agro": "Food & Beverage"
+      "agro": "Food & beverage"
     },
     "link": "Talk about your industry"
   },
   "realisationsSection": {
-    "overline": "Case Studies",
+    "overline": "Case studies",
     "headline": "Selected work, across six countries.",
     "body": "Real results for real clients: MTN, Ecobank and others; from Cotonou to Dakar.",
     "mapLabel": "Countries where we work.",
     "portfolioLink": "View full portfolio →"
   },
   "realisationsPage": {
-    "overline": "Selected Work · In Depth",
+    "overline": "Selected work · In depth",
     "headline": "Six campaigns. Six different markets.",
     "body": "Every market has its own codes. Discover the strategy and on-the-ground execution behind results we can put a number on."
   },
@@ -116,8 +116,8 @@
     "benin": {
       "countryLabel": "Benin",
       "city": "Cotonou",
-      "title": "Ecobank Benin, Merchant Network",
-      "service": "Trade Marketing: Banking Network",
+      "title": "Ecobank Benin, merchant network.",
+      "service": "Trade marketing: banking network",
       "description": "A long-standing Toolègba client, Ecobank Benin entrusted us with animating its distribution network. Our results on this contract earned Ecobank's trust in Togo, Guinea and Senegal too.",
       "tags": [
         "Trade marketing",
@@ -128,8 +128,8 @@
     "cotedivoire": {
       "countryLabel": "Ivory Coast",
       "city": "Abidjan",
-      "title": "MTN Ivory Coast, Mobile Money Network",
-      "service": "Distribution: Agent Network",
+      "title": "MTN Ivory Coast, Mobile Money network.",
+      "service": "Distribution: agent network",
       "description": "Deployment and animation of MTN Ivory Coast's Mobile Money agent and merchant network, using the same model already proven elsewhere on the continent.",
       "tags": [
         "Distribution",
@@ -140,8 +140,8 @@
     "cameroun": {
       "countryLabel": "Cameroon",
       "city": "Douala",
-      "title": "Field Presence, Cameroon",
-      "service": "Consumer Services",
+      "title": "Field presence, Cameroon.",
+      "service": "Consumer services",
       "description": "Our local team in Cameroon applies the same direct-consumer-contact approach that's built our reputation across the six countries where we operate.",
       "tags": [
         "Consumer services",
@@ -151,8 +151,8 @@
     "guinee": {
       "countryLabel": "Guinea",
       "city": "Conakry",
-      "title": "Ecobank Guinea, Trade Marketing Rollout",
-      "service": "Trade Marketing: Banking Network",
+      "title": "Ecobank Guinea, trade marketing rollout.",
+      "service": "Trade marketing: banking network",
       "description": "Following our results in Benin, Ecobank entrusted us with animating its network in Guinea too, using the same method and execution standards.",
       "tags": [
         "Trade marketing",
@@ -163,8 +163,8 @@
     "togo": {
       "countryLabel": "Togo",
       "city": "Lomé",
-      "title": "Ecobank Togo, Trade Marketing Rollout",
-      "service": "Trade Marketing: Banking Network",
+      "title": "Ecobank Togo, trade marketing rollout.",
+      "service": "Trade marketing: banking network",
       "description": "The same trusted contract renewed in Togo: field animation and distribution network development for Ecobank.",
       "tags": [
         "Trade marketing",
@@ -175,8 +175,8 @@
     "senegal": {
       "countryLabel": "Senegal",
       "city": "Dakar",
-      "title": "Mobile Money Network, Senegal",
-      "service": "Distribution: Agent & Merchant Network",
+      "title": "Mobile Money network, Senegal.",
+      "service": "Distribution: agent & merchant network",
       "description": "In three and a half years, we grew this network from 2,000 to 26,000 active agents and from 300 to 18,000 accepting merchants, creating more than 53,000 points of convergence along the way.",
       "tags": [
         "Distribution",
@@ -194,8 +194,8 @@
       "ctaSecondary": "See our case studies"
     },
     "values": {
-      "overline": "Our Values",
-      "headline": "What Drives Us",
+      "overline": "Our values",
+      "headline": "What drives us.",
       "body": "Three principles, non-negotiable on every campaign.",
       "items": [
         {
@@ -213,44 +213,44 @@
       ]
     },
     "services": {
-      "overline": "Our Services",
-      "headline": "Six Disciplines, One Team on the Ground",
+      "overline": "Our services",
+      "headline": "Six disciplines, one team on the ground.",
       "body": "From trade marketing to distribution, every function your brand needs to move product and build presence.",
       "link": "See all our services →"
     },
     "space": {
-      "overline": "Our Agency",
-      "headline": "Where Everything Is Built",
+      "overline": "Our agency",
+      "headline": "Where everything is built.",
       "body": "Our agency in Cotonou, where strategies take shape before heading to the field, in the six countries where we operate."
     },
     "team": {
-      "overline": "The Team",
-      "headline": "Small Team, Big Ambition",
+      "overline": "The team",
+      "headline": "Small team, big ambition.",
       "body": "A multidisciplinary team of strategists, creatives and field specialists who genuinely love what they build.",
       "members": [
         {
           "name": "Aïcha Toko",
-          "role": "Managing Director"
+          "role": "Managing director"
         },
         {
           "name": "Kokou Mensah",
-          "role": "Strategy Director"
+          "role": "Strategy director"
         },
         {
           "name": "Fatou Adjovi",
-          "role": "Creative Director"
+          "role": "Creative director"
         },
         {
           "name": "Yawo Koffi",
-          "role": "Trade Marketing Lead"
+          "role": "Trade marketing lead"
         },
         {
           "name": "Chidinma Osei",
-          "role": "Digital Lead"
+          "role": "Digital lead"
         },
         {
           "name": "Bertrand Houngbo",
-          "role": "Accounts Lead"
+          "role": "Accounts lead"
         }
       ]
     }
@@ -269,14 +269,14 @@
     },
     "form": {
       "overline": "Inquiry",
-      "headline": "Tell us about your project",
+      "headline": "Tell us about your project.",
       "labels": {
         "name": "Name",
         "company": "Company",
         "email": "Email",
         "phone": "Phone",
-        "service": "Project Type",
-        "budget": "Estimated Budget",
+        "service": "Project type",
+        "budget": "Estimated budget",
         "message": "Message"
       },
       "placeholders": {
@@ -297,8 +297,8 @@
       ],
       "otherOption": "Other",
       "consent": "I agree that this information will only be used to respond to my request.",
-      "submit": "Send Inquiry",
-      "note": "We respond within 24 hours · No spam, ever",
+      "submit": "Send inquiry",
+      "note": "We respond within 24 hours · No spam, ever.",
       "thanksTitle": "Thank you!",
       "thanksBody": "Your message has been received. We'll get back to you within 24 hours."
     },
@@ -318,7 +318,7 @@
     ],
     "faq": {
       "overline": "FAQ",
-      "headline": "Common Questions",
+      "headline": "Common questions.",
       "items": [
         {
           "q": "What happens after I submit?",
@@ -349,7 +349,7 @@
     "phoneCICountry": "Ivory Coast",
     "website": "toolegba.com",
     "addressShort": "Cotonou, Benin",
-    "addressFull": "Cotonou, Benin ; active in Ivory Coast, Cameroon, Guinea Conakry, Togo & Senegal",
+    "addressFull": "Cotonou, Benin ; active in Ivory Coast, Cameroon, Guinea Conakry, Togo and Senegal.",
     "hours": "Mon – Fri, 8am – 6pm",
     "tagline": "Trust us with your KPIs.",
     "footerAbout": "A pan-African BTL group building trade marketing and distribution results since 2014, across six West and Central African markets.",
@@ -359,40 +359,40 @@
     "quickLinks": {
       "home": "Home",
       "services": "Services",
-      "realisations": "Case Studies",
+      "realisations": "Case studies",
       "agence": "Agency",
       "contact": "Contact"
     },
-    "footerQuickLinksHeading": "Quick Links",
+    "footerQuickLinksHeading": "Quick links",
     "footerServicesHeading": "Services",
-    "footerStudioHeading": "Agency & Contact",
+    "footerStudioHeading": "Agency & contact",
     "privacy": "Privacy",
     "terms": "Terms",
     "allRightsReserved": "All rights reserved."
   },
   "services": {
     "trade": {
-      "word": "Trade Marketing",
+      "word": "Trade marketing",
       "definition": null,
-      "title": "Trade Marketing",
+      "title": "Trade marketing",
       "text": "Prospecting, building and animating your distribution network: point-of-sale visibility, POS materials, competitive monitoring."
     },
     "operationnel": {
-      "word": "Operational Marketing",
+      "word": "Operational marketing",
       "definition": null,
-      "title": "Operational Marketing",
+      "title": "Operational marketing",
       "text": "Market activations, podium trucks, club animations and events that strengthen your presence on the ground."
     },
     "consumer": {
       "word": "Consumer",
       "definition": null,
-      "title": "Consumer Services",
+      "title": "Consumer services",
       "text": "Direct contact with the consumer: outreach, recruitment, sales and advice, where classic media no longer moves the needle."
     },
     "rp": {
-      "word": "Public Relations",
+      "word": "Public relations",
       "definition": null,
-      "title": "Public Relations",
+      "title": "Public relations",
       "text": "Building, defending and elevating your brand's reputation with the audiences that matter."
     },
     "distribution": {
@@ -402,9 +402,9 @@
       "text": "From supply to sale: stock management, reseller networks, customer service and after-sales support, nationwide."
     },
     "social": {
-      "word": "Social Media",
+      "word": "Social media",
       "definition": null,
-      "title": "Social Media",
+      "title": "Social media",
       "text": "Digital strategy, community management and content creation that extend your visibility online."
     }
   }

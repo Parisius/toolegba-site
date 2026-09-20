@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type MouseEvent, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MAP_WIDTH, MAP_HEIGHT, MAP_COUNTRIES, MAP_PINS } from "./data/west-africa-map";
@@ -84,14 +84,6 @@ function RpIcon() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
-  );
-}
-
-function ArrowUpRightIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -200,26 +192,27 @@ function RealisationCard({
           <p className="mt-1.5 font-display text-xl font-semibold leading-snug text-white md:text-2xl">
             {text.title}
           </p>
-          <div className="grid transition-[grid-template-rows] duration-300 ease-out grid-rows-[0fr] group-hover:grid-rows-[1fr]">
-            <p className="overflow-hidden pr-10 text-sm leading-relaxed text-white/70">
-              <span className="block pt-2.5">{text.description}</span>
-            </p>
-          </div>
           <p className="mt-2.5 text-xs text-white/50">
             {realisation.flag} {text.countryLabel}, {text.city}
           </p>
         </div>
 
-        <span
-          className="absolute bottom-5 right-5 flex h-10 w-10 scale-75 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white opacity-0 backdrop-blur-md transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100"
-        >
-          <span className="absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: realisation.accent }} />
-          <span className="relative">
-            <ArrowUpRightIcon />
-          </span>
-        </span>
       </div>
     </button>
+  );
+}
+
+function ChevronIcon({ dir }: { dir: "left" | "right" }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+      <path
+        d={dir === "left" ? "M19 12H5m0 0 6-6m-6 6 6 6" : "M5 12h14m0 0-6-6m6 6-6 6"}
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
@@ -235,6 +228,29 @@ export default function RealisationsSection() {
   const active = REALISATIONS.find((r) => r.country === hovered) ?? REALISATIONS[0];
 
   const [preview, setPreview] = useState({ x: 0, y: 0, visible: false });
+
+  const stripRef = useRef<HTMLDivElement>(null);
+  const [canScroll, setCanScroll] = useState({ left: false, right: true });
+  const updateCanScroll = useCallback(() => {
+    const el = stripRef.current;
+    if (!el) return;
+    setCanScroll({
+      left: el.scrollLeft > 4,
+      right: el.scrollLeft + el.clientWidth < el.scrollWidth - 4,
+    });
+  }, []);
+  useEffect(() => {
+    updateCanScroll();
+    window.addEventListener("resize", updateCanScroll);
+    return () => window.removeEventListener("resize", updateCanScroll);
+  }, [updateCanScroll]);
+  const scrollStrip = (dir: 1 | -1) => {
+    const el = stripRef.current;
+    if (!el) return;
+    const card = el.firstElementChild as HTMLElement | null;
+    const step = (card?.offsetWidth ?? 300) + 20;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
 
   const handleMapMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -265,8 +281,29 @@ export default function RealisationsSection() {
 
         {/* Filmstrip - snap-scrolling, one card per country. Hovering a card
             also highlights the matching country on the map below. */}
-        <div className="relative mt-14">
+        <div className="relative mt-10">
+          <div className="mb-5 flex justify-end gap-2">
+            {(["left", "right"] as const).map((dir) => {
+              const enabled = dir === "left" ? canScroll.left : canScroll.right;
+              return (
+                <button
+                  key={dir}
+                  type="button"
+                  disabled={!enabled}
+                  onClick={() => scrollStrip(dir === "left" ? -1 : 1)}
+                  aria-label={dir === "left" ? "Previous" : "Next"}
+                  className={`flex h-11 w-11 items-center justify-center rounded-full bg-white text-petrole shadow-md shadow-petrole/10 transition-all duration-200 ${
+                    enabled ? "hover:scale-105 hover:bg-petrole hover:text-white" : "cursor-default opacity-40"
+                  }`}
+                >
+                  <ChevronIcon dir={dir} />
+                </button>
+              );
+            })}
+          </div>
           <div
+            ref={stripRef}
+            onScroll={updateCanScroll}
             className="flex gap-5 overflow-x-auto pb-3 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
             style={{ scrollSnapType: "x mandatory" }}
           >
