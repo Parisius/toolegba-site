@@ -61,7 +61,7 @@ export default function ContactForm() {
             {/* Honeypot: hidden from people, filled in by bots. */}
             <input
               type="text"
-              name="website"
+              name="_gotcha"
               tabIndex={-1}
               autoComplete="off"
               aria-hidden="true"

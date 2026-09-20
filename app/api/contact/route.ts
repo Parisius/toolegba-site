@@ -70,7 +70,10 @@ export async function POST(request: Request) {
   }
 
   // Honeypot: real visitors never see or fill this field. Pretend success to bots.
-  if (str(body.website, 100)) return NextResponse.json({ ok: true });
+  if (str(body._gotcha, 100)) {
+    console.warn("contact: honeypot triggered, submission dropped");
+    return NextResponse.json({ ok: true });
+  }
 
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
   if (rateLimited(ip)) return NextResponse.json({ ok: false }, { status: 429 });
