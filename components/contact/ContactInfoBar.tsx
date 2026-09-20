@@ -1,6 +1,7 @@
 "use client";
 
 import { useDict } from "@/lib/language/LanguageProvider";
+import { useContact } from "@/lib/language/useContent";
 
 function MailIcon() {
   return (
@@ -53,8 +54,8 @@ function ClockIcon() {
 }
 
 export default function ContactInfoBar() {
-  const { contactPage, siteInfo } = useDict();
-  const { infoBar } = contactPage;
+  const { siteInfo } = useDict();
+  const { infoBar } = useContact();
 
   return (
     <section className="relative z-[100] bg-ivoire px-6 pb-16 md:px-10">

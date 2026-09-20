@@ -1,7 +1,7 @@
 "use client";
 
-import { useDict } from "@/lib/language/LanguageProvider";
 import ScrollReveal from "@/components/reactbits/ScrollReveal";
+import { useAbout } from "@/lib/language/useContent";
 
 function CompassIcon() {
   return (
@@ -42,8 +42,7 @@ const VALUE_ICONS = [<CompassIcon key="compass" />, <ChartIcon key="chart" />, <
 const VALUE_ACCENTS = ["#E54E3E", "#468F92", "#D11A1B"];
 
 export default function AgenceValues() {
-  const { agencePage } = useDict();
-  const { values } = agencePage;
+  const { values } = useAbout().page;
 
   return (
     <section className="relative z-[100] bg-ivoire px-6 py-24 md:px-10 md:py-32">

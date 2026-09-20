@@ -1,0 +1,92 @@
+{
+  "images": {
+    "logos": {
+      "color": "/logo-color.png",
+      "white": "/logo-white.png"
+    },
+    "brand": {
+      "iconCorail": "/brand/icon-corail.png",
+      "iconPetrole": "/brand/icon-petrole.png"
+    }
+  },
+  "fr": {
+    "nav": {
+      "accueil": "Accueil",
+      "agence": "À propos",
+      "services": "Nos services",
+      "realisations": "Réalisations",
+      "contact": "Contact"
+    },
+    "siteInfo": {
+      "email": "ecoute@toolegba.com",
+      "phone": "+229 01 97 05 05 05",
+      "phoneHref": "+2290197050505",
+      "phoneCountry": "Bénin",
+      "phoneCI": "+225 05 95 05 05 05",
+      "phoneCIHref": "+2250595050505",
+      "phoneCICountry": "Côte d'Ivoire",
+      "website": "toolegba.com",
+      "addressShort": "Cotonou, Bénin",
+      "addressFull": "Cotonou, Bénin ; actif en Côte d'Ivoire, au Cameroun, en Guinée Conakry, au Togo et au Sénégal.",
+      "hours": "Lun – Ven, 8h – 18h",
+      "tagline": "Confiez-nous vos KPI.",
+      "footerAbout": "Un groupe panafricain BTL qui construit des résultats trade marketing et distribution depuis 2014, dans six marchés d'Afrique de l'Ouest et Centrale.",
+      "footerCta": "Parlons de votre projet. Pas de pression, juste une conversation.",
+      "talkToAgency": "Discuter avec l'agence",
+      "getQuote": "Obtenir un devis",
+      "quickLinks": {
+        "home": "Accueil",
+        "services": "Services",
+        "realisations": "Réalisations",
+        "agence": "Agence",
+        "contact": "Contact"
+      },
+      "footerQuickLinksHeading": "Liens rapides",
+      "footerServicesHeading": "Services",
+      "footerStudioHeading": "Agence & contact",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "allRightsReserved": "Tous droits réservés."
+    }
+  },
+  "en": {
+    "nav": {
+      "accueil": "Home",
+      "agence": "About us",
+      "services": "Our services",
+      "realisations": "Portfolio",
+      "contact": "Contact"
+    },
+    "siteInfo": {
+      "email": "ecoute@toolegba.com",
+      "phone": "+229 01 97 05 05 05",
+      "phoneHref": "+2290197050505",
+      "phoneCountry": "Benin",
+      "phoneCI": "+225 05 95 05 05 05",
+      "phoneCIHref": "+2250595050505",
+      "phoneCICountry": "Ivory Coast",
+      "website": "toolegba.com",
+      "addressShort": "Cotonou, Benin",
+      "addressFull": "Cotonou, Benin ; active in Ivory Coast, Cameroon, Guinea Conakry, Togo and Senegal.",
+      "hours": "Mon – Fri, 8am – 6pm",
+      "tagline": "Trust us with your KPIs.",
+      "footerAbout": "A pan-African BTL group building trade marketing and distribution results since 2014, across six West and Central African markets.",
+      "footerCta": "Let's talk about your project. No pressure, just a conversation.",
+      "talkToAgency": "Talk to the agency",
+      "getQuote": "Get a quote",
+      "quickLinks": {
+        "home": "Home",
+        "services": "Services",
+        "realisations": "Case studies",
+        "agence": "Agency",
+        "contact": "Contact"
+      },
+      "footerQuickLinksHeading": "Quick links",
+      "footerServicesHeading": "Services",
+      "footerStudioHeading": "Agency & contact",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "allRightsReserved": "All rights reserved."
+    }
+  }
+}

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useDict } from "@/lib/language/LanguageProvider";
 import ScrollReveal from "@/components/reactbits/ScrollReveal";
+import { useContact } from "@/lib/language/useContent";
 
 function ChevronIcon({ open }: { open: boolean }) {
   return (
@@ -18,8 +18,7 @@ function ChevronIcon({ open }: { open: boolean }) {
 }
 
 export default function FaqAccordion() {
-  const { contactPage } = useDict();
-  const { faq } = contactPage;
+  const { faq } = useContact();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (

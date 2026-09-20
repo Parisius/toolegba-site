@@ -1,0 +1,159 @@
+{
+  "images": {
+    "hero": "/images/agence-hero.webp",
+    "space1": "https://picsum.photos/seed/toolegba-space-1/900/700",
+    "space2": "https://picsum.photos/seed/toolegba-space-2/900/700",
+    "team": [
+      "https://picsum.photos/seed/toolegba-team-1/400/400",
+      "https://picsum.photos/seed/toolegba-team-2/400/400",
+      "https://picsum.photos/seed/toolegba-team-3/400/400",
+      "https://picsum.photos/seed/toolegba-team-4/400/400",
+      "https://picsum.photos/seed/toolegba-team-5/400/400",
+      "https://picsum.photos/seed/toolegba-team-6/400/400"
+    ]
+  },
+  "fr": {
+    "page": {
+      "hero": {
+        "overline": "Agence",
+        "headline": "En route vers le titre de plus grande agence BTL d'Afrique.",
+        "body": "Toolègba mène des campagnes BTL en Afrique depuis 2014. Connu sous le nom Hoope Africa jusqu'à notre rebranding en 2025, aujourd'hui, sous le nom Toolègba, nous accompagnons nos partenaires vers la réalisations de leurs objectif à travers des actions trade et événementielles, avec une logistique en propre, des équipes locales formées, et des partenariats financiers qui nous permettent de nous engager pleinement sur chaque campagne.",
+        "ctaPrimary": "Discuter avec l'agence",
+        "ctaSecondary": "Voir nos réalisations"
+      },
+      "values": {
+        "overline": "Nos valeurs",
+        "headline": "Ce qui nous anime.",
+        "body": "Trois principes, non négociables sur chaque campagne.",
+        "items": [
+          {
+            "title": "Rigueur",
+            "text": "Chaque campagne suit un cadre précis : objectifs clairs, exécution suivie, rien laissé au hasard."
+          },
+          {
+            "title": "Discipline",
+            "text": "Une présence terrain constante, appuyée par des outils de tracking et de reporting quotidiens."
+          },
+          {
+            "title": "Résultats",
+            "text": "Nous nous engageons sur des KPI, pas sur des promesses. C'est ce que nous vous restituons."
+          }
+        ]
+      },
+      "services": {
+        "overline": "Nos services",
+        "headline": "Six disciplines, une seule équipe terrain.",
+        "body": "Du trade marketing à la distribution, chaque fonction dont votre marque a besoin pour vendre et être visible.",
+        "link": "Voir tous nos services →"
+      },
+      "space": {
+        "overline": "Notre agence",
+        "headline": "Là où tout se construit.",
+        "body": "Notre agence à Cotonou, où les stratégies prennent forme avant de partir sur le terrain, dans les six pays où nous opérons."
+      },
+      "team": {
+        "overline": "L'Équipe",
+        "headline": "Petite équipe, grandes ambitions.",
+        "body": "Une équipe pluridisciplinaire de stratèges, créatifs et spécialistes terrain qui aiment vraiment ce qu'ils construisent.",
+        "members": [
+          {
+            "name": "Aïcha Toko",
+            "role": "Direction générale"
+          },
+          {
+            "name": "Kokou Mensah",
+            "role": "Direction stratégie"
+          },
+          {
+            "name": "Fatou Adjovi",
+            "role": "Direction créative"
+          },
+          {
+            "name": "Yawo Koffi",
+            "role": "Responsable trade marketing"
+          },
+          {
+            "name": "Chidinma Osei",
+            "role": "Responsable digital"
+          },
+          {
+            "name": "Bertrand Houngbo",
+            "role": "Responsable comptes"
+          }
+        ]
+      }
+    }
+  },
+  "en": {
+    "page": {
+      "hero": {
+        "overline": "Agency",
+        "headline": "On a mission to become Africa's biggest BTL agency.",
+        "body": "Toolègba has run BTL campaigns in Africa since 2014. Known as Hoope Africa until our 2025 rebrand, today, under the Toolègba name, we help our partners reach their goals through trade and event-driven actions, with owned logistics, trained local teams and financial partnerships that let us commit fully to every campaign.",
+        "ctaPrimary": "Talk to the agency",
+        "ctaSecondary": "See our case studies"
+      },
+      "values": {
+        "overline": "Our values",
+        "headline": "What drives us.",
+        "body": "Three principles, non-negotiable on every campaign.",
+        "items": [
+          {
+            "title": "Rigor",
+            "text": "Every campaign follows a precise framework: clear objectives, tracked execution, nothing left to chance."
+          },
+          {
+            "title": "Discipline",
+            "text": "Constant field presence, backed by daily tracking and reporting tools."
+          },
+          {
+            "title": "Results",
+            "text": "We commit to KPIs, not promises. That's what we report back."
+          }
+        ]
+      },
+      "services": {
+        "overline": "Our services",
+        "headline": "Six disciplines, one team on the ground.",
+        "body": "From trade marketing to distribution, every function your brand needs to move product and build presence.",
+        "link": "See all our services →"
+      },
+      "space": {
+        "overline": "Our agency",
+        "headline": "Where everything is built.",
+        "body": "Our agency in Cotonou, where strategies take shape before heading to the field, in the six countries where we operate."
+      },
+      "team": {
+        "overline": "The team",
+        "headline": "Small team, big ambition.",
+        "body": "A multidisciplinary team of strategists, creatives and field specialists who genuinely love what they build.",
+        "members": [
+          {
+            "name": "Aïcha Toko",
+            "role": "Managing director"
+          },
+          {
+            "name": "Kokou Mensah",
+            "role": "Strategy director"
+          },
+          {
+            "name": "Fatou Adjovi",
+            "role": "Creative director"
+          },
+          {
+            "name": "Yawo Koffi",
+            "role": "Trade marketing lead"
+          },
+          {
+            "name": "Chidinma Osei",
+            "role": "Digital lead"
+          },
+          {
+            "name": "Bertrand Houngbo",
+            "role": "Accounts lead"
+          }
+        ]
+      }
+    }
+  }
+}

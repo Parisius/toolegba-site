@@ -4,98 +4,12 @@ import { useCallback, useEffect, useRef, useState, type MouseEvent, type ReactNo
 import Image from "next/image";
 import Link from "next/link";
 import { MAP_WIDTH, MAP_HEIGHT, MAP_COUNTRIES, MAP_PINS } from "./data/west-africa-map";
-import { REALISATIONS, type Realisation, type RealisationIcon } from "./data/realisations";
-import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { REALISATIONS, type Realisation } from "./data/realisations";
+import { useLanguage } from "@/lib/language/LanguageProvider";
+import { useRealisationsPage } from "@/lib/language/useContent";
+import ServiceIcon from "@/components/icons/ServiceIcon";
+import { getRealisationContent, getRealisationImages } from "@/lib/realisations";
 import ScrollReveal from "@/components/reactbits/ScrollReveal";
-
-function TradeIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path d="M4 9.5 5 4h14l1 5.5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path
-        d="M4 9.5a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path d="M5.5 9.5V20h13V9.5" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M10 20v-5h4v5" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-function OperationnelIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path d="M3 7h11v9H3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M14 10h4l3 3v3h-7z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <circle cx="7" cy="18" r="1.6" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="17" cy="18" r="1.6" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-function ConsumerIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <circle cx="12" cy="8" r="3.3" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M5.5 20c1-3.8 4-5.8 6.5-5.8s5.5 2 6.5 5.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function DistributionIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path d="M12 3.5 20 7.5v9L12 20.5 4 16.5v-9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M4 7.5 12 11.5l8-4M12 11.5V20.5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function SocialIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path
-        d="M4 5.5h16v10H12.5L8 19v-3.5H4v-10Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path d="M8 9.5h8M8 12h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function RpIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path
-        d="m3.5 12 3.2-3.2a2 2 0 0 1 2.9.1l.9.9 3.4-3.4a2 2 0 0 1 2.9 0l3.7 3.7"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="m8 10.5 3.3 3.3a1.6 1.6 0 0 0 2.3 0 1.6 1.6 0 0 0 0-2.3M13 16l1.4 1.4a1.6 1.6 0 0 0 2.3-2.3"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-const ICONS: Record<RealisationIcon, ReactNode> = {
-  trade: <TradeIcon />,
-  operationnel: <OperationnelIcon />,
-  consumer: <ConsumerIcon />,
-  distribution: <DistributionIcon />,
-  social: <SocialIcon />,
-  rp: <RpIcon />,
-};
 
 const hexToRgba = (hex: string, alpha: number) => {
   const c = hex.replace("#", "");
@@ -132,7 +46,7 @@ function RealisationCard({
   const glowRef = useRef<HTMLDivElement>(null);
   const glowColor = hexToRgba(realisation.accent, 0.55);
 
-  const handleMouseMove = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleMouseMove = (e: MouseEvent<HTMLAnchorElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -141,19 +55,19 @@ function RealisationCard({
   };
 
   return (
-    <button
-      type="button"
+    <Link
+      href={`/realisations/${realisation.id}`}
       onMouseEnter={onHover}
       onFocus={onHover}
       onMouseMove={handleMouseMove}
-      className={`group relative w-[280px] flex-none overflow-hidden rounded-[28px] shadow-lg shadow-petrole/15 ring-corail transition-shadow duration-300 md:w-[300px] ${
+      className={`group relative block w-[280px] flex-none overflow-hidden rounded-[28px] shadow-lg shadow-petrole/15 ring-corail transition-shadow duration-300 md:w-[300px] ${
         isActive ? "ring-2" : "ring-0"
       }`}
       style={{ scrollSnapAlign: "start" }}
     >
       <div className="relative h-[360px] w-full md:h-[380px]">
         <Image
-          src={pictures.realisations[realisation.id as keyof typeof pictures.realisations]}
+          src={getRealisationImages(realisation.id).cover}
           alt=""
           fill
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -178,7 +92,7 @@ function RealisationCard({
               className="absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               style={{ background: realisation.accent }}
             />
-            <span className="relative">{ICONS[realisation.icon]}</span>
+            <span className="relative"><ServiceIcon id={realisation.icon} className="h-4 w-4" /></span>
           </span>
           <span className="rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[11px] font-medium tracking-wide text-white/80 backdrop-blur-md">
             {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
@@ -198,7 +112,7 @@ function RealisationCard({
         </div>
 
       </div>
-    </button>
+    </Link>
   );
 }
 
@@ -220,9 +134,9 @@ const PREVIEW_W = 160;
 const PREVIEW_H = 122;
 
 export default function RealisationsSection() {
-  const { realisationsSection, realisations } = useDict();
-  const getText = (id: string): RealisationText =>
-    realisations[id as keyof typeof realisations];
+  const { section: realisationsSection } = useRealisationsPage();
+  const { lang } = useLanguage();
+  const getText = (id: string): RealisationText => getRealisationContent(id, lang);
 
   const [hovered, setHovered] = useState<string>(REALISATIONS[0].country);
   const active = REALISATIONS.find((r) => r.country === hovered) ?? REALISATIONS[0];
@@ -406,7 +320,7 @@ export default function RealisationsSection() {
             >
               <div className="relative h-20 w-full">
                 <Image
-                  src={pictures.realisations[active.id as keyof typeof pictures.realisations]}
+                  src={getRealisationImages(active.id).cover}
                   alt=""
                   fill
                   className="object-cover"

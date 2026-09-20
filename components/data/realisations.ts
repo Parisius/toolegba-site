@@ -1,7 +1,7 @@
 export type RealisationIcon = "consumer" | "trade" | "operationnel" | "distribution" | "social" | "rp";
 
 export interface Realisation {
-  id: string; // key into content/en.json & content/fr.json "realisations" and content/picture.json "realisations"
+  id: string; // key into content/realisations.json (text in fr/en, images) and the /realisations/[slug] route
   country: string; // stable (untranslated) key matching MapPin["name"] / MapCountry["name"]
   flag: string;
   icon: RealisationIcon;

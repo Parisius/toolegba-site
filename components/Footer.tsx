@@ -5,7 +5,8 @@ import Link from "next/link";
 import GlowCursor from "./reactbits/GlowCursor";
 import { useInView } from "./useInView";
 import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { useServices } from "@/lib/language/useContent";
+import { siteImages } from "@/lib/content";
 
 function MailIcon() {
   return (
@@ -90,17 +91,22 @@ const SOCIALS = [
 export default function Footer() {
   const { ref, inView } = useInView<HTMLElement>();
   const dict = useDict();
-  const { siteInfo, services } = dict;
+  const { siteInfo } = dict;
+  const services = useServices();
 
   const QUICK_LINKS = [
     { label: siteInfo.quickLinks.home, href: "/" },
-    { label: siteInfo.quickLinks.services, href: "/#services" },
+    { label: siteInfo.quickLinks.services, href: "/services" },
     { label: siteInfo.quickLinks.realisations, href: "/realisations" },
     { label: siteInfo.quickLinks.agence, href: "/agence" },
     { label: siteInfo.quickLinks.contact, href: "/contact" },
   ];
 
-  const SERVICES = [services.trade.title, services.operationnel.title, services.consumer.title, services.rp.title, services.distribution.title, services.social.title];
+  const SERVICES = services.map((service) => ({
+    key: service.id,
+    label: service.title,
+    href: `/services#${service.id}`,
+  }));
 
   return (
     <footer
@@ -154,7 +160,7 @@ export default function Footer() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-4">
           <div>
             <div className="relative h-8 w-36">
-              <Image src={pictures.logos.white} alt="Toolègba" fill className="object-contain object-left" />
+              <Image src={siteImages.logos.white} alt="Toolègba" fill className="object-contain object-left" />
             </div>
             <p className="mt-4 max-w-xs font-sans text-sm text-white/70">
               {siteInfo.footerAbout}
@@ -194,7 +200,11 @@ export default function Footer() {
             </p>
             <ul className="mt-4 space-y-3 font-sans text-sm text-white/80">
               {SERVICES.map((s) => (
-                <li key={s}>{s}</li>
+                <li key={s.key}>
+                  <Link href={s.href} className="hover:text-corail">
+                    {s.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

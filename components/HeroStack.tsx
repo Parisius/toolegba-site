@@ -7,27 +7,27 @@ import RevealOnView from "./RevealOnView";
 import Lightfall from "./reactbits/Lightfall";
 import TextType from "./reactbits/TextType";
 import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { useServices } from "@/lib/language/useContent";
+import { indexImages, siteImages } from "@/lib/content";
 
-interface SlideMeta {
+interface Slide {
+  word: string;
+  caption: string;
   oneLine?: boolean;
   lightfall?: boolean;
   image?: string;
   size?: string;
 }
 
-// Per-slide presentation details that aren't translatable text - paired by
-// index with the dictionary's hero.slides array.
-const SLIDE_META: SlideMeta[] = [
-  // Sized from the viewport (title is ~10.5em wide) so it never wraps, not even its colon.
-  { lightfall: true, oneLine: true, size: "[font-size:min(5.5rem,calc((100vw_-_4.5rem)/11.3))]" },
-  { image: pictures.hero.trade },
-  { image: pictures.hero.operationnel, size: "text-[clamp(2.25rem,6.5vw,5rem)]" },
-  { image: pictures.hero.consumer, size: "text-[clamp(2.25rem,6.5vw,5rem)]" },
-  { image: pictures.hero.rp },
-  { image: pictures.hero.distribution },
-  { image: pictures.hero.social, size: "text-[clamp(2.25rem,6vw,4.5rem)]" },
-];
+// Sized from the viewport (title is ~10.5em wide) so it never wraps, not even its colon.
+const INTRO_SIZE = "[font-size:min(5.5rem,calc((100vw_-_4.5rem)/11.3))]";
+
+// Long service titles get a slightly smaller type size; the rest use the default.
+const SERVICE_SIZE: Record<string, string> = {
+  operationnel: "text-[clamp(2.25rem,6.5vw,5rem)]",
+  consumer: "text-[clamp(2.25rem,6.5vw,5rem)]",
+  social: "text-[clamp(2.25rem,6vw,4.5rem)]",
+};
 
 // The greeting splash only plays on a full page load; wait for it to finish
 // before typing on the first visit, but not on later client-side navigations.
@@ -79,7 +79,17 @@ export default function HeroStack() {
       window.removeEventListener("resize", update);
     };
   }, []);
-  const slides = hero.slides.map((slide, index) => ({ ...slide, ...SLIDE_META[index] }));
+  // First slide is the intro; then one slide per service, straight from services.json.
+  const services = useServices();
+  const slides: Slide[] = [
+    { word: hero.intro.word, caption: hero.intro.caption, lightfall: true, oneLine: true, size: INTRO_SIZE },
+    ...services.map((service) => ({
+      word: service.hero.word,
+      caption: service.hero.caption,
+      image: service.images.hero,
+      size: SERVICE_SIZE[service.id],
+    })),
+  ];
 
   return (
     <section ref={sectionRef} id="hero" aria-label="Our expertise" className="relative bg-ivoire">
@@ -119,11 +129,6 @@ export default function HeroStack() {
             <div className="absolute inset-0 bg-gradient-to-t from-petrole/90 via-petrole/30 to-petrole/40" />
 
             <div className="relative flex h-full flex-col items-center justify-center px-6 text-center md:px-10">
-              {slide.definition && (
-                <p className="mb-4 font-sans text-lg tracking-wide text-corail md:text-xl">
-                  {slide.definition}
-                </p>
-              )}
               <h2
                 className={`mx-auto font-display font-semibold leading-[0.95] text-white ${
                   slide.oneLine ? "w-full whitespace-nowrap" : "max-w-4xl"
@@ -153,7 +158,7 @@ export default function HeroStack() {
       >
         <div className={INNER}>
           <Image
-            src={pictures.hero.closing}
+            src={indexImages.closing}
             alt=""
             fill
             className="object-cover"
@@ -166,7 +171,7 @@ export default function HeroStack() {
               <p className="mb-1 font-sans text-sm text-white/85 md:text-base">{hero.closing.eyebrow}</p>
               <div className="relative aspect-[2000/507] w-[44vw] max-w-[13rem] md:max-w-xs">
                 <Image
-                  src={pictures.logos.white}
+                  src={siteImages.logos.white}
                   alt="Toolègba"
                   fill
                   className="object-contain"

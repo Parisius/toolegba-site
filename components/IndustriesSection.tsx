@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { indexImages } from "@/lib/content";
 import ScrollReveal from "@/components/reactbits/ScrollReveal";
 
 const INDUSTRY_KEYS = ["telecom", "banque", "transfert", "assurance", "agro"] as const;
@@ -92,7 +92,7 @@ function IndustryCarousel() {
             className="relative aspect-[3/2] w-[78vw] max-w-[340px] flex-none snap-center overflow-hidden rounded-[22px] border border-white/40 bg-petrole shadow-xl shadow-petrole/25"
           >
             <Image
-              src={pictures.industries[key]}
+              src={indexImages.industries[key]}
               alt=""
               fill
               sizes="80vw"
@@ -205,7 +205,7 @@ export default function IndustriesSection() {
                 }}
               >
                 <Image
-                  src={pictures.industries[key]}
+                  src={indexImages.industries[key]}
                   alt=""
                   fill
                   className="object-cover transition-[filter] duration-300 ease-out"

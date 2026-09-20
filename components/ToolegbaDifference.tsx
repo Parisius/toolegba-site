@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { indexImages } from "@/lib/content";
 import ScrollReveal from "@/components/reactbits/ScrollReveal";
 
 function TargetIcon() {
@@ -73,7 +73,7 @@ export default function ToolegbaDifference() {
             <p className={TEXT}>{market.text}</p>
             <div className="relative mt-8 flex-1 overflow-hidden rounded-2xl">
               <Image
-                src={pictures.difference.market}
+                src={indexImages.difference.market}
                 alt=""
                 fill
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -85,7 +85,7 @@ export default function ToolegbaDifference() {
           <div className={`group ${CARD} flex flex-col p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-petrole/20`}>
             <div className="relative h-48 overflow-hidden rounded-2xl">
               <Image
-                src={pictures.difference.team}
+                src={indexImages.difference.team}
                 alt=""
                 fill
                 className="object-cover object-[center_11%] transition-transform duration-500 ease-out group-hover:scale-105"
@@ -102,7 +102,7 @@ export default function ToolegbaDifference() {
           <div className={`group ${CARD} flex flex-col p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-petrole/20`}>
             <div className="relative h-48 overflow-hidden rounded-2xl">
               <Image
-                src={pictures.difference.scoping}
+                src={indexImages.difference.scoping}
                 alt=""
                 fill
                 className="object-cover object-[center_8%] transition-transform duration-500 ease-out group-hover:scale-105"
@@ -123,7 +123,7 @@ export default function ToolegbaDifference() {
         >
           <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 md:h-32 md:w-32">
             <Image
-              src={pictures.difference.impact}
+              src={indexImages.difference.impact}
               alt=""
               fill
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"

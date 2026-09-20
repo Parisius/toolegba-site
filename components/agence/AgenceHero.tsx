@@ -1,14 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
 import WordReveal from "@/components/reactbits/WordReveal";
 import ScrollExpandImage from "@/components/reactbits/ScrollExpandImage";
+import { useAbout } from "@/lib/language/useContent";
+import { aboutImages } from "@/lib/content";
 
 export default function AgenceHero() {
-  const { agencePage } = useDict();
-  const { hero } = agencePage;
+  const { hero } = useAbout().page;
 
   return (
     <section className="relative z-[100] bg-ivoire px-6 pb-16 pt-40 md:px-10 md:pb-24 md:pt-48">
@@ -41,7 +40,7 @@ export default function AgenceHero() {
         </div>
       </div>
 
-      <ScrollExpandImage src={pictures.agence.hero} className="mt-14 max-w-7xl" />
+      <ScrollExpandImage src={aboutImages.hero} className="mt-14 max-w-7xl" />
     </section>
   );
 }

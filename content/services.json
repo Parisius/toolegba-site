@@ -1,0 +1,292 @@
+{
+  "page": {
+    "fr": {
+      "overline": "Nos services",
+      "headline": "Tout ce dont votre marque a besoin sur le terrain.",
+      "body": "Six services complémentaires, conçus pour vendre et rendre votre marque visible, de l'activation locale au réseau national.",
+      "pointsLabel": "Ce que nous faisons",
+      "proofLabel": "Sur le terrain",
+      "cta": "Parler de ce service",
+      "closing": {
+        "headline": "Parlons de votre prochain projet.",
+        "body": "Dites-nous ce que vous voulez atteindre. Nous vous dirons quel service, ou quelle combinaison, y répond le mieux.",
+        "button": "Discuter avec l'agence"
+      }
+    },
+    "en": {
+      "overline": "Our services",
+      "headline": "Everything your brand needs on the ground.",
+      "body": "Six complementary services, built to sell and to make your brand visible, from a local activation to a national network.",
+      "pointsLabel": "What we do",
+      "proofLabel": "In the field",
+      "cta": "Talk about this service",
+      "closing": {
+        "headline": "Let's talk about your next project.",
+        "body": "Tell us what you want to achieve. We will tell you which service, or which combination, fits best.",
+        "button": "Talk to the agency"
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "trade",
+      "accent": "#E54E3E",
+      "images": {
+        "hero": "/services/trade.webp",
+        "page": "/services/trade.webp"
+      },
+      "fr": {
+        "title": "Trade marketing",
+        "text": "Prospecter, construire et animer votre réseau de distribution : visibilité point de vente, PLV, veille concurrentielle.",
+        "hero": {
+          "word": "le trade marketing",
+          "caption": "Construire et animer votre réseau de distribution : vos points de vente visibles, animés, suivis."
+        },
+        "page": {
+          "intro": "Nous prospectons, construisons et animons votre réseau de distribution, pour que votre marque soit visible et bien exécutée là où se fait la vente.",
+          "points": [
+            "Prospection et recrutement des points de vente",
+            "Visibilité en point de vente et PLV",
+            "Animation et suivi terrain du réseau",
+            "Veille concurrentielle"
+          ],
+          "proof": "Ecobank au Bénin, en Guinée et au Togo : la même méthode, répétée d'un pays à l'autre tout en s'adaptant au marché local."
+        }
+      },
+      "en": {
+        "title": "Trade marketing",
+        "text": "Prospecting, building and animating your distribution network: point-of-sale visibility, POS materials, competitive monitoring.",
+        "hero": {
+          "word": "trade marketing",
+          "caption": "Building and animating your distribution network: your points of sale visible, animated, tracked."
+        },
+        "page": {
+          "intro": "We prospect, build and animate your distribution network, so your brand is visible and well executed where the sale happens.",
+          "points": [
+            "Prospecting and recruiting points of sale",
+            "Point-of-sale visibility and POS materials",
+            "Field animation and follow-up of the network",
+            "Competitive monitoring"
+          ],
+          "proof": "Ecobank in Benin, Guinea and Togo: the same method, repeated from country to country, while adapting to the local market."
+        }
+      }
+    },
+    {
+      "id": "operationnel",
+      "accent": "#7F2B2B",
+      "images": {
+        "hero": "/services/fieldactivation.webp",
+        "page": "/services/fieldactivation.webp"
+      },
+      "fr": {
+        "title": "Marketing opérationnel",
+        "text": "Activation marché, camions podium, animations club et événements pour renforcer votre présence terrain.",
+        "hero": {
+          "word": "le marketing opérationnel",
+          "caption": "Des activations qui font bouger le terrain pour être là où se trouve le consommateur."
+        },
+        "page": {
+          "intro": "Des activations qui font bouger le terrain, pour être là où se trouve le consommateur.",
+          "points": [
+            "Activations marché",
+            "Camions podium",
+            "Animations club",
+            "Événements de marque"
+          ],
+          "proof": null
+        }
+      },
+      "en": {
+        "title": "Operational marketing",
+        "text": "Market activations, podium trucks, club animations and events that strengthen your presence on the ground.",
+        "hero": {
+          "word": "operational marketing",
+          "caption": "Activations that get the field moving, so your brand is where the consumer is."
+        },
+        "page": {
+          "intro": "Activations that get the field moving, so your brand is where the consumer is.",
+          "points": [
+            "Market activations",
+            "Podium trucks",
+            "Club animations",
+            "Brand events"
+          ],
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "consumer",
+      "accent": "#468F92",
+      "images": {
+        "hero": "/services/consumer.webp",
+        "page": "/services/consumer.webp"
+      },
+      "fr": {
+        "title": "Services consumer",
+        "text": "Le contact direct avec le consommateur : sensibilisation, recrutement, vente et conseil, là où les médias classiques ne suffisent plus.",
+        "hero": {
+          "word": "la proximité avec vos clients",
+          "caption": "Le contact direct avec le consommateur, là où les médias classiques ne suffisent plus."
+        },
+        "page": {
+          "intro": "Un contact direct avec le consommateur, là où les médias classiques ne suffisent plus.",
+          "points": [
+            "Sensibilisation",
+            "Recrutement",
+            "Vente",
+            "Conseil"
+          ],
+          "proof": null
+        }
+      },
+      "en": {
+        "title": "Consumer services",
+        "text": "Direct contact with the consumer: outreach, recruitment, sales and advice, where classic media no longer moves the needle.",
+        "hero": {
+          "word": "closeness to your customers",
+          "caption": "Direct contact with the consumer, where classic mass media no longer moves the needle."
+        },
+        "page": {
+          "intro": "Direct contact with the consumer, where classic media no longer moves the needle.",
+          "points": [
+            "Outreach",
+            "Recruitment",
+            "Sales",
+            "Advice"
+          ],
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "rp",
+      "accent": "#D11A1B",
+      "images": {
+        "hero": "/services/publicrelation.webp",
+        "page": "/services/publicrelation.webp"
+      },
+      "fr": {
+        "title": "Relations publiques",
+        "text": "Construire, défendre et valoriser la réputation de votre marque auprès des publics qui comptent.",
+        "hero": {
+          "word": "la relation publique",
+          "caption": "Construire, défendre et valoriser une réputation qui inspire confiance."
+        },
+        "page": {
+          "intro": "Une réputation qui inspire confiance, auprès des publics qui comptent pour votre marque.",
+          "points": [
+            "Construire votre réputation",
+            "Défendre votre marque",
+            "Valoriser votre image auprès des publics clés"
+          ],
+          "proof": null
+        }
+      },
+      "en": {
+        "title": "Public relations",
+        "text": "Building, defending and elevating your brand's reputation with the audiences that matter.",
+        "hero": {
+          "word": "public relations",
+          "caption": "Building, defending and elevating a reputation that inspires trust."
+        },
+        "page": {
+          "intro": "A reputation that inspires trust, with the audiences that matter to your brand.",
+          "points": [
+            "Building your reputation",
+            "Defending your brand",
+            "Elevating your image with the key audiences"
+          ],
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "distribution",
+      "accent": "#2C3D4F",
+      "images": {
+        "hero": "/services/distribution.webp",
+        "page": "/services/distribution.webp"
+      },
+      "fr": {
+        "title": "Distribution",
+        "text": "De l'approvisionnement à la vente : gestion de stock, réseau de revendeurs, service client et after-sales sur tout le territoire.",
+        "hero": {
+          "word": "la distribution",
+          "caption": "De l'approvisionnement au point de vente : réseau de revendeurs et service après-vente sur tout le territoire."
+        },
+        "page": {
+          "intro": "De l'approvisionnement à la vente, sur tout le territoire.",
+          "points": [
+            "Gestion de stock",
+            "Réseau de revendeurs",
+            "Service client",
+            "Service après-vente"
+          ],
+          "proof": "Réseau Mobile Money au Sénégal : de 2 000 à 26 000 agents actifs en trois ans et demi."
+        }
+      },
+      "en": {
+        "title": "Distribution",
+        "text": "From supply to sale: stock management, reseller networks, customer service and after-sales support, nationwide.",
+        "hero": {
+          "word": "distribution",
+          "caption": "From stock to shelf: supply, reseller networks, and after-sales support across the territory."
+        },
+        "page": {
+          "intro": "From supply to sale, across the whole territory.",
+          "points": [
+            "Stock management",
+            "Reseller network",
+            "Customer service",
+            "After-sales support"
+          ],
+          "proof": "Mobile Money network in Senegal: from 2,000 to 26,000 active agents in three and a half years."
+        }
+      }
+    },
+    {
+      "id": "social",
+      "accent": "#E54E3E",
+      "images": {
+        "hero": "/services/socialnetwork.webp",
+        "page": "/services/socialnetwork.webp"
+      },
+      "fr": {
+        "title": "Réseaux sociaux",
+        "text": "Stratégie digitale, community management et création de contenu pour prolonger votre visibilité en ligne.",
+        "hero": {
+          "word": "les réseaux sociaux",
+          "caption": "Stratégie digitale, community management et création de contenu pour rendre votre marque visible, en ligne aussi."
+        },
+        "page": {
+          "intro": "Une stratégie digitale et des contenus qui rendent votre marque visible, en ligne aussi.",
+          "points": [
+            "Stratégie digitale",
+            "Community management",
+            "Création de contenu"
+          ],
+          "proof": null
+        }
+      },
+      "en": {
+        "title": "Social media",
+        "text": "Digital strategy, community management and content creation that extend your visibility online.",
+        "hero": {
+          "word": "social media",
+          "caption": "Digital strategy, community management and content creation to make your brand visible online too."
+        },
+        "page": {
+          "intro": "A digital strategy and content that make your brand visible online too.",
+          "points": [
+            "Digital strategy",
+            "Community management",
+            "Content creation"
+          ],
+          "proof": null
+        }
+      }
+    }
+  ]
+}

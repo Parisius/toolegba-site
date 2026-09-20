@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import pictures from "@/content/picture.json";
+import { siteImages } from "@/lib/content";
 
 const FILL_DURATION = 550; // ms the loading line takes to fill
 const HOLD_AFTER_FILL = 120; // ms pause once full before fading out
@@ -48,7 +48,7 @@ export default function PageTransition() {
             className="relative h-9 w-9"
           >
             <Image
-              src={pictures.brand.iconCorail}
+              src={siteImages.brand.iconCorail}
               alt="Toolègba"
               fill
               priority

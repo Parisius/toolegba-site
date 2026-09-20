@@ -1,29 +1,38 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { useDict } from "@/lib/language/LanguageProvider";
+import { useLanguage } from "@/lib/language/LanguageProvider";
+import { useContact, useServices } from "@/lib/language/useContent";
 
 const FIELD =
   "w-full rounded-xl border border-petrole/15 bg-white px-4 py-3 font-sans text-sm text-petrole placeholder:text-petrole/40 transition-colors focus:border-corail focus:outline-none";
 const LABEL = "mb-2 block text-xs font-semibold uppercase tracking-wide text-petrole/60";
 
 export default function ContactForm() {
-  const { contactPage, services } = useDict();
-  const { form } = contactPage;
+  const { form } = useContact();
+  const services = useServices();
+  const { lang } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
 
-  const serviceOptions = [
-    services.trade.title,
-    services.operationnel.title,
-    services.consumer.title,
-    services.rp.title,
-    services.distribution.title,
-    services.social.title,
-  ];
+  const serviceOptions = services.map((service) => service.title);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (status === "sending") return;
+    setStatus("sending");
+    const data = Object.fromEntries(new FormData(e.currentTarget));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, lang }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setSubmitted(true);
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -49,6 +58,15 @@ export default function ContactForm() {
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
+            {/* Honeypot: hidden from people, filled in by bots. */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="absolute -left-[9999px] h-0 w-0 opacity-0"
+            />
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
                 <label className={LABEL} htmlFor="name">
@@ -130,10 +148,17 @@ export default function ContactForm() {
 
             <button
               type="submit"
-              className="mt-8 w-full rounded-full bg-petrole px-6 py-3.5 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-corail sm:w-auto"
+              disabled={status === "sending"}
+              className="mt-8 w-full rounded-full bg-petrole px-6 py-3.5 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-corail disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
             >
-              {form.submit}
+              {status === "sending" ? form.sending : form.submit}
             </button>
+
+            {status === "error" && (
+              <p role="alert" className="mt-4 font-sans text-sm text-red-700">
+                <strong>{form.errorTitle}</strong> {form.errorBody}
+              </p>
+            )}
 
             <p className="mt-4 font-sans text-xs text-petrole/50">{form.note}</p>
           </form>

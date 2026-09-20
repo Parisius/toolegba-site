@@ -1,10 +1,10 @@
 "use client";
 
-import { useDict } from "@/lib/language/LanguageProvider";
+import { useRealisationsPage } from "@/lib/language/useContent";
 import WordReveal from "@/components/reactbits/WordReveal";
 
 export default function CaseStudiesHero() {
-  const { realisationsPage } = useDict();
+  const { list: realisationsPage } = useRealisationsPage();
 
   return (
     <section className="relative z-[100] bg-ivoire px-6 pb-16 pt-40 md:px-10 md:pb-20 md:pt-48">

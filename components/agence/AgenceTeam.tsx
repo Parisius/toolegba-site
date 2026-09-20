@@ -1,16 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
 import ScrollReveal from "@/components/reactbits/ScrollReveal";
+import { useAbout } from "@/lib/language/useContent";
+import { aboutImages } from "@/lib/content";
 
-const TEAM_PHOTO_KEYS = ["1", "2", "3", "4", "5", "6"] as const;
 const TEAM_ACCENTS = ["#E54E3E", "#FFAF5C", "#468F92", "#7F2B2B", "#D11A1B", "#E54E3E"];
 
 export default function AgenceTeam() {
-  const { agencePage } = useDict();
-  const { team } = agencePage;
+  const { team } = useAbout().page;
 
   return (
     <section className="relative z-[100] bg-ivoire px-6 py-24 md:px-10 md:py-32">
@@ -35,7 +33,7 @@ export default function AgenceTeam() {
                 style={{ ["--accent" as string]: TEAM_ACCENTS[i] }}
               >
                 <Image
-                  src={pictures.agence.team[TEAM_PHOTO_KEYS[i]]}
+                  src={aboutImages.team[i]}
                   alt=""
                   fill
                   className="object-cover grayscale transition-all duration-500 ease-out group-hover:scale-110 group-hover:grayscale-0"

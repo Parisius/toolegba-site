@@ -13,20 +13,22 @@ export default function ScrollReveal({
   className = "",
   delay = 0,
   y = 28,
+  x = 0,
   duration = 0.7,
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
   y?: number;
+  x?: number;
   duration?: number;
 }) {
   const transition: Transition = { duration, delay, ease: [0.22, 1, 0.36, 1] };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y, x }}
+      whileInView={{ opacity: 1, y: 0, x: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={transition}
       className={className}

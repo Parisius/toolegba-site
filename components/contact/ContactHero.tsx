@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
 import WordReveal from "@/components/reactbits/WordReveal";
+import { useContact } from "@/lib/language/useContent";
+import { contactImages } from "@/lib/content";
 
 export default function ContactHero() {
-  const { contactPage } = useDict();
-  const { hero } = contactPage;
+  const { hero } = useContact();
 
   return (
     <section className="relative z-[100] bg-ivoire px-6 pb-16 pt-40 md:px-10 md:pb-20 md:pt-48">
@@ -28,7 +27,7 @@ export default function ContactHero() {
 
       <div className="relative mx-auto mt-14 h-[220px] w-full max-w-5xl overflow-hidden rounded-[28px] md:h-[340px]">
         <Image
-          src={pictures.contact.hero}
+          src={contactImages.hero}
           alt=""
           fill
           priority

@@ -1,10 +1,15 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import en from "@/content/en.json";
-import fr from "@/content/fr.json";
+import siteData from "@/content/site.json";
+import indexData from "@/content/index.json";
 
 export type Lang = "en" | "fr";
+// Site-wide text (menu, footer, contact details) plus the home page text.
+// Other pages read their own file in /content through lib/content.ts.
+const en = { ...siteData.en, ...indexData.en };
+const fr = { ...siteData.fr, ...indexData.fr };
+
 export type Dictionary = typeof en;
 
 const DICTS: Record<Lang, Dictionary> = { en, fr };

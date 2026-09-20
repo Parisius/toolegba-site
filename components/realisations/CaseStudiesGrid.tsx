@@ -2,89 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { REALISATIONS, type RealisationIcon } from "@/components/data/realisations";
-import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { REALISATIONS } from "@/components/data/realisations";
+import Link from "next/link";
+import { useLanguage } from "@/lib/language/LanguageProvider";
+import { useRealisationsPage } from "@/lib/language/useContent";
+import ServiceIcon from "@/components/icons/ServiceIcon";
+import { getRealisationContent, getRealisationImages } from "@/lib/realisations";
 import WordReveal from "@/components/reactbits/WordReveal";
-
-function TradeIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path d="M4 9.5 5 4h14l1 5.5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path
-        d="M4 9.5a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path d="M5.5 9.5V20h13V9.5" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M10 20v-5h4v5" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-function OperationnelIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path d="M3 7h11v9H3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M14 10h4l3 3v3h-7z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <circle cx="7" cy="18" r="1.6" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="17" cy="18" r="1.6" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-function ConsumerIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <circle cx="12" cy="8" r="3.3" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M5.5 20c1-3.8 4-5.8 6.5-5.8s5.5 2 6.5 5.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function DistributionIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path d="M12 3.5 20 7.5v9L12 20.5 4 16.5v-9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M4 7.5 12 11.5l8-4M12 11.5V20.5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function SocialIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path
-        d="M4 5.5h16v10H12.5L8 19v-3.5H4v-10Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path d="M8 9.5h8M8 12h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function RpIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path
-        d="m3.5 12 3.2-3.2a2 2 0 0 1 2.9.1l.9.9 3.4-3.4a2 2 0 0 1 2.9 0l3.7 3.7"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="m8 10.5 3.3 3.3a1.6 1.6 0 0 0 2.3 0 1.6 1.6 0 0 0 0-2.3M13 16l1.4 1.4a1.6 1.6 0 0 0 2.3-2.3"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import TiltCard from "@/components/reactbits/TiltCard";
 
 function ArrowUpRightIcon() {
   return (
@@ -94,35 +19,28 @@ function ArrowUpRightIcon() {
   );
 }
 
-const ICONS: Record<RealisationIcon, React.ReactNode> = {
-  trade: <TradeIcon />,
-  operationnel: <OperationnelIcon />,
-  consumer: <ConsumerIcon />,
-  distribution: <DistributionIcon />,
-  social: <SocialIcon />,
-  rp: <RpIcon />,
-};
-
 export default function CaseStudiesGrid() {
-  const { realisations } = useDict();
+  const { detail: caseStudy } = useRealisationsPage();
+  const { lang } = useLanguage();
 
   return (
     <section className="relative z-[100] bg-ivoire px-6 pb-24 md:px-10 md:pb-32">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2">
         {REALISATIONS.map((r, index) => {
-          const text = realisations[r.id as keyof typeof realisations];
+          const text = getRealisationContent(r.id, lang);
           return (
+            <TiltCard key={r.id} glow={r.accent}>
             <motion.article
-              key={r.id}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (index % 2) * 0.12 }}
               className="group overflow-hidden rounded-[28px] border border-petrole/10 bg-white/70 transition-shadow duration-300 hover:shadow-2xl hover:shadow-petrole/15"
             >
+              <Link href={`/realisations/${r.id}`} className="block">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
-                  src={pictures.realisations[r.id as keyof typeof pictures.realisations]}
+                  src={getRealisationImages(r.id).cover}
                   alt=""
                   fill
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
@@ -138,7 +56,7 @@ export default function CaseStudiesGrid() {
                     className="absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     style={{ background: r.accent }}
                   />
-                  <span className="relative">{ICONS[r.icon]}</span>
+                  <span className="relative"><ServiceIcon id={r.icon} className="h-4 w-4" /></span>
                 </span>
 
                 <span className="absolute bottom-4 right-4 flex h-10 w-10 scale-75 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white opacity-0 backdrop-blur-md transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100">
@@ -174,8 +92,14 @@ export default function CaseStudiesGrid() {
                     </span>
                   ))}
                 </div>
+                <p className="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold text-petrole transition-colors group-hover:text-corail">
+                  {caseStudy.viewCase}
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </p>
               </div>
+              </Link>
             </motion.article>
+            </TiltCard>
           );
         })}
       </div>

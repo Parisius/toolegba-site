@@ -1,0 +1,145 @@
+{
+  "images": {
+    "closing": "/services/closing.webp",
+    "craft": "/images/craft.webp",
+    "difference": {
+      "market": "/images/market.webp",
+      "team": "/images/team.webp",
+      "scoping": "/images/scoping.webp",
+      "impact": "/images/impact.webp"
+    },
+    "industries": {
+      "telecom": "/images/telco.webp",
+      "banque": "/images/banque.webp",
+      "transfert": "/images/moneyt.webp",
+      "assurance": "/images/insurance.webp",
+      "agro": "/images/agro.webp"
+    }
+  },
+  "fr": {
+    "hero": {
+      "intro": {
+        "word": "Nous prenons en main :",
+        "caption": "Avec une présence dans au moins six pays africains depuis 2014."
+      },
+      "closing": {
+        "eyebrow": "Nous, c'est",
+        "tagline": "Confiez-nous vos KPI.",
+        "ctaPrimary": "Démarrons un projet",
+        "ctaSecondary": "Nos réalisations"
+      }
+    },
+    "bottomBar": {
+      "scrollToExplore": "Défiler pour explorer"
+    },
+    "about": {
+      "overline": "À propos",
+      "headline": "Construit sur le terrain, depuis 2014.",
+      "body": "Toolègba est un groupe panafricain BTL, actif dans six marchés d'Afrique de l'Ouest et Centrale depuis 2014. Nous étions connu sous le nom Hoope Africa jusqu'à notre rebranding en 2025. Nous sommes partis d'un constat simple : les médias classiques ont montré leurs limites. Le vrai impact vient du contact direct avec le consommateur. C'est la stratégie que nous perfectionnons depuis plus de dix ans, portée par une équipe forte de plus de 15 ans d'expérience combinée dans de grandes agences ATL, BTL et TTL.",
+      "link": "En savoir plus sur l'agence →"
+    },
+    "craft": {
+      "overline": "Notre savoir-faire",
+      "headline": "Chaque campagne commence par un vrai contact."
+    },
+    "difference": {
+      "overline": "La différence Toolègba",
+      "headline": "Pourquoi c'est important pour votre marque.",
+      "body": "Une campagne n'est pas un livrable, c'est un contact avec de vraies personnes. C'est la différence entre une activation que personne ne retient et une autre qui fait bouger votre marché.",
+      "cards": {
+        "market": {
+          "title": "Plus de 12 ans à apprendre votre marché.",
+          "text": "Nous arpentons les points de vente à Cotonou, Abidjan et au-delà depuis 2014. Équipes locales, langues locales, une vraie connaissance de la façon dont les gens achètent et se déplacent."
+        },
+        "team": {
+          "title": "Une équipe, des ressources locales formées.",
+          "text": "Dans chaque pays où nous opérons, nous nous appuyons sur des ressources qui maîtrisent l'écosystème local, que nous formons et encadrons directement."
+        },
+        "scoping": {
+          "title": "Un cadrage honnête. Jamais de survente.",
+          "text": "Parfois la réponse est une activation bien placée. Parfois c'est la construction d'un réseau de distribution complet. Nous ne vous vendrons pas des médias de masse auxquels nous ne croyons plus."
+        },
+        "impact": {
+          "title": "Un impact mesuré après coup.",
+          "text": "Rapports quotidiens, hebdomadaires et mensuels, suivis via notre propre application terrain. Vous voyez exactement ce qui a bougé : agents recrutés, PDV déployés, visites réalisées. Pas seulement ce qui avait l'air bien le jour du lancement."
+        }
+      }
+    },
+    "industries": {
+      "overline": "Secteurs",
+      "headline": "Une confiance sectorielle éprouvée.",
+      "body": "Du télécom à la banque en passant par l'assurance, les secteurs où l'exécution trade marketing et distribution fait la différence.",
+      "items": {
+        "telecom": "Télécom",
+        "banque": "Banque",
+        "transfert": "Transfert d'argent",
+        "assurance": "Assurances",
+        "agro": "Agro-alimentaire"
+      },
+      "link": "Parlons de votre secteur"
+    }
+  },
+  "en": {
+    "hero": {
+      "intro": {
+        "word": "We take charge of:",
+        "caption": "With a presence in at least six African countries since 2014."
+      },
+      "closing": {
+        "eyebrow": "We are",
+        "tagline": "Trust us with your KPIs.",
+        "ctaPrimary": "Let's start a project",
+        "ctaSecondary": "Our case studies"
+      }
+    },
+    "bottomBar": {
+      "scrollToExplore": "Scroll to explore"
+    },
+    "about": {
+      "overline": "About us",
+      "headline": "Built on the ground, since 2014.",
+      "body": "Toolègba is a pan-African BTL group, active across six West and Central African markets since 2014. We were known as Hoope Africa until our 2025 rebrand. We started from a simple observation: classic mass media has shown its limits. Real impact comes from direct contact with the consumer. That's the strategy we've spent over a decade refining, backed by a team with 15+ years of combined experience in major ATL, BTL and TTL agencies.",
+      "link": "Learn more about the agency →"
+    },
+    "craft": {
+      "overline": "Our craft",
+      "headline": "Every campaign starts with real contact."
+    },
+    "difference": {
+      "overline": "The Toolègba difference",
+      "headline": "Why it matters for your brand.",
+      "body": "A campaign is not a deliverable, it's contact with real people. It's the difference between an activation nobody remembers and one that moves your market.",
+      "cards": {
+        "market": {
+          "title": "12+ years learning your market.",
+          "text": "We've walked the points of sale in Cotonou, Abidjan and beyond since 2014. Local teams, local languages, real knowledge of how people actually shop and move."
+        },
+        "team": {
+          "title": "One team, trained local resources.",
+          "text": "In every country where we operate, we rely on resources who master the local ecosystem, and whom we train and supervise directly."
+        },
+        "scoping": {
+          "title": "Honest scoping. No overselling, ever.",
+          "text": "Sometimes the answer is one well-placed activation. Sometimes it's a full distribution network build. We won't sell you mass media we no longer believe in."
+        },
+        "impact": {
+          "title": "Impact measured after the fact.",
+          "text": "Daily, weekly and monthly reports, tracked through our own field app. You see exactly what moved: agents recruited, POS deployed, visits made, not just what looked good on launch day."
+        }
+      }
+    },
+    "industries": {
+      "overline": "Industries",
+      "headline": "Trusted across key sectors.",
+      "body": "From telecom to banking to insurance, the sectors where trade marketing and distribution execution matter most.",
+      "items": {
+        "telecom": "Telecom",
+        "banque": "Banking",
+        "transfert": "Money transfer",
+        "assurance": "Insurance",
+        "agro": "Food & beverage"
+      },
+      "link": "Talk about your industry"
+    }
+  }
+}

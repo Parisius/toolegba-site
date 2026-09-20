@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage, useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { siteImages } from "@/lib/content";
 import GlassSurface from "@/components/reactbits/GlassSurface";
 
 /** Visual language switch, wired to the shared LanguageProvider. */
@@ -45,7 +45,7 @@ export default function Header() {
   const NAV_LINKS = [
     { label: dict.nav.accueil, href: "/#" },
     { label: dict.nav.agence, href: "/agence" },
-    { label: dict.nav.services, href: "/#services" },
+    { label: dict.nav.services, href: "/services" },
     { label: dict.nav.realisations, href: "/realisations" },
     { label: dict.nav.contact, href: "/contact" },
   ];
@@ -72,7 +72,7 @@ export default function Header() {
     };
   }, [isHome]);
 
-  const isActive = (href: string) => href !== "/#services" && href === pathname;
+  const isActive = (href: string) => href === pathname;
 
   return (
     <>
@@ -97,7 +97,7 @@ export default function Header() {
         >
           <Link href="/" className="relative block h-7 w-32 md:h-8 md:w-36">
             <Image
-              src={pastHero ? pictures.logos.color : pictures.logos.white}
+              src={pastHero ? siteImages.logos.color : siteImages.logos.white}
               alt="Toolègba"
               fill
               priority
@@ -147,7 +147,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/" className="relative block h-9 w-40" onClick={() => setOpen(false)}>
               <Image
-                src={pictures.logos.white}
+                src={siteImages.logos.white}
                 alt="Toolègba"
                 fill
                 className="object-contain object-left"

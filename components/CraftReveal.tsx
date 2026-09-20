@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import GlowCursor from "./reactbits/GlowCursor";
 import { useDict } from "@/lib/language/LanguageProvider";
-import pictures from "@/content/picture.json";
+import { indexImages } from "@/lib/content";
 
 export default function CraftReveal() {
   const { craft } = useDict();
@@ -48,7 +48,7 @@ export default function CraftReveal() {
     >
       <motion.div style={{ scale, filter }} className="absolute inset-0">
         <Image
-          src={pictures.craft}
+          src={indexImages.craft}
           alt=""
           fill
           className="object-cover"

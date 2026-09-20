@@ -1,0 +1,1382 @@
+{
+  "page": {
+    "fr": {
+      "list": {
+        "overline": "Travaux sélectionnés · En détail",
+        "headline": "Six campagnes. Six marchés différents.",
+        "body": "Chaque marché a ses codes. Découvrez la stratégie et l'exécution terrain derrière des résultats que l'on peut chiffrer."
+      },
+      "section": {
+        "overline": "Réalisations",
+        "headline": "Une sélection de projets, dans six pays.",
+        "body": "De vrais résultats pour de vrais clients MTN, Ecobank et d'autres ; de Cotonou à Dakar.",
+        "mapLabel": "Pays où nous intervenons.",
+        "portfolioLink": "Voir tout le portfolio →"
+      },
+      "detail": {
+        "breadcrumbRoot": "Réalisations",
+        "ctaPrimary": "Lancer un projet comme celui-ci",
+        "ctaSecondary": "Toutes les réalisations",
+        "challengeLabel": "Le défi",
+        "approachLabel": "Notre réponse",
+        "highlightsOverline": "Ce que nous avons fait",
+        "highlightsHeadline": "Une exécution complète, pas une simple présence.",
+        "galleryOverline": "Sur le terrain",
+        "galleryHeadline": "Le projet en images.",
+        "processOverline": "Comment nous avons procédé",
+        "processHeadline": "Une méthode, portée de la stratégie à l'exécution.",
+        "resultsLabel": "En chiffres",
+        "nextLabel": "Réalisation suivante",
+        "closingOverline": "Votre projet",
+        "closingHeadline": "Et si le prochain résultat était le vôtre ?",
+        "closingBody": "Parlez-nous de votre marché, de votre réseau ou de votre campagne. Nous vous répondons sous 24 heures.",
+        "closingPrimary": "Démarrons un projet",
+        "closingSecondary": "Voir toutes les réalisations",
+        "viewCase": "Lire la réalisation"
+      }
+    },
+    "en": {
+      "list": {
+        "overline": "Selected work · In depth",
+        "headline": "Six campaigns. Six different markets.",
+        "body": "Every market has its own codes. Discover the strategy and on-the-ground execution behind results we can put a number on."
+      },
+      "section": {
+        "overline": "Case studies",
+        "headline": "Selected work, across six countries.",
+        "body": "Real results for real clients: MTN, Ecobank and others; from Cotonou to Dakar.",
+        "mapLabel": "Countries where we work.",
+        "portfolioLink": "View full portfolio →"
+      },
+      "detail": {
+        "breadcrumbRoot": "Case studies",
+        "ctaPrimary": "Start a project like this one",
+        "ctaSecondary": "All case studies",
+        "challengeLabel": "The challenge",
+        "approachLabel": "Our answer",
+        "highlightsOverline": "What we did",
+        "highlightsHeadline": "Complete execution, not just a presence.",
+        "galleryOverline": "In the field",
+        "galleryHeadline": "The project in pictures.",
+        "processOverline": "How we got there",
+        "processHeadline": "One method, carried from strategy to execution.",
+        "resultsLabel": "In numbers",
+        "nextLabel": "Next case study",
+        "closingOverline": "Your project",
+        "closingHeadline": "What if the next result were yours?",
+        "closingBody": "Tell us about your market, your network or your campaign. We reply within 24 hours.",
+        "closingPrimary": "Start a project",
+        "closingSecondary": "See all case studies",
+        "viewCase": "Read the case study"
+      }
+    }
+  },
+  "items": {
+    "benin": {
+      "images": {
+        "cover": "https://picsum.photos/seed/toolegba-realisation-benin/1200/900",
+        "hero": "https://picsum.photos/seed/toolegba-case-benin-hero/1800/1000",
+        "gallery": [
+          "https://picsum.photos/seed/toolegba-case-benin-g1/1000/760",
+          "https://picsum.photos/seed/toolegba-case-benin-g2/1000/760",
+          "https://picsum.photos/seed/toolegba-case-benin-g3/1000/760",
+          "https://picsum.photos/seed/toolegba-case-benin-g4/1000/760"
+        ]
+      },
+      "fr": {
+        "countryLabel": "Bénin",
+        "city": "Cotonou",
+        "title": "Ecobank Bénin, réseau marchands.",
+        "service": "Trade marketing : réseau bancaire",
+        "description": "Client historique de Toolègba, Ecobank Bénin nous a confié l'animation de son réseau de distribution. Nos performances sur ce contrat nous ont valu la confiance d'Ecobank au Togo, en Guinée et au Sénégal.",
+        "tags": [
+          "Trade marketing",
+          "Réseau bancaire",
+          "Multi-pays"
+        ],
+        "page": {
+          "headline": "Le contrat qui a ouvert la confiance d'Ecobank dans trois autres pays.",
+          "intro": "Ecobank Bénin est un client historique de Toolègba. Nous animons son réseau de distribution sur le terrain, avec des équipes locales que nous formons et encadrons.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Ecobank Bénin"
+            },
+            {
+              "label": "Marché",
+              "value": "Bénin, Cotonou"
+            },
+            {
+              "label": "Service",
+              "value": "Trade marketing"
+            }
+          ],
+          "manifesto": "Animer un réseau bancaire, ce n'est pas poser une affiche et repartir. C'est être présent, régulier et mesurable, point de vente après point de vente.",
+          "challenge": {
+            "title": "Un réseau à faire vivre, pas seulement à installer.",
+            "paragraphs": [
+              "Ecobank Bénin nous a confié l'animation de son réseau de distribution. L'enjeu : le garder visible, actif et bien exécuté, jour après jour.",
+              "Un réseau bancaire de proximité ne se juge pas le jour du lancement, mais sur la durée."
+            ]
+          },
+          "approach": {
+            "title": "Une exécution terrain suivie de bout en bout.",
+            "paragraphs": [
+              "Nos équipes locales, formées et encadrées directement par Toolègba, animent le réseau : prospection, visibilité en point de vente, suivi terrain et veille concurrentielle.",
+              "Chaque action est suivie et restituée par des rapports réguliers, via notre application terrain."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Prospection des points de vente",
+              "text": "Identifier et activer les points de vente qui comptent pour le réseau."
+            },
+            {
+              "title": "Visibilité en point de vente",
+              "text": "Une présence de marque claire, avec PLV et supports adaptés."
+            },
+            {
+              "title": "Animation et suivi terrain",
+              "text": "Des équipes locales présentes, formées et encadrées."
+            },
+            {
+              "title": "Veille concurrentielle",
+              "text": "Un regard permanent sur ce qui se passe autour du réseau."
+            },
+            {
+              "title": "Reporting régulier",
+              "text": "Des rapports quotidiens, hebdomadaires et mensuels."
+            },
+            {
+              "title": "Une méthode qui se répète",
+              "text": "La même approche, d'un pays à l'autre."
+            }
+          ],
+          "galleryCaptions": [
+            "Animation d'un point de vente.",
+            "Visibilité de la marque sur le terrain.",
+            "Suivi terrain du réseau.",
+            "Équipe locale en action."
+          ],
+          "process": [
+            {
+              "title": "Cadrer les objectifs",
+              "text": "Objectifs, périmètre et indicateurs définis ensemble avant le lancement."
+            },
+            {
+              "title": "Former les équipes locales",
+              "text": "Des ressources locales, formées et encadrées directement par Toolègba."
+            },
+            {
+              "title": "Animer le terrain",
+              "text": "Une présence régulière, point de vente après point de vente."
+            },
+            {
+              "title": "Mesurer et restituer",
+              "text": "Des rapports réguliers, suivis via notre application terrain."
+            }
+          ],
+          "outcome": {
+            "title": "Une performance qui a voyagé.",
+            "text": "Nos performances sur ce contrat ont valu à Toolègba la confiance d'Ecobank au Togo, en Guinée et au Sénégal."
+          },
+          "results": [
+            {
+              "value": "3",
+              "label": "pays de plus où Ecobank nous a fait confiance"
+            }
+          ]
+        }
+      },
+      "en": {
+        "countryLabel": "Benin",
+        "city": "Cotonou",
+        "title": "Ecobank Benin, merchant network.",
+        "service": "Trade marketing: banking network",
+        "description": "A long-standing Toolègba client, Ecobank Benin entrusted us with animating its distribution network. Our results on this contract earned Ecobank's trust in Togo, Guinea and Senegal too.",
+        "tags": [
+          "Trade marketing",
+          "Banking network",
+          "Multi-country"
+        ],
+        "page": {
+          "headline": "The contract that opened Ecobank's trust in three more countries.",
+          "intro": "Ecobank Benin is a long-standing Toolègba client. We animate its distribution network in the field, with local teams that we train and supervise.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Ecobank Benin"
+            },
+            {
+              "label": "Market",
+              "value": "Benin, Cotonou"
+            },
+            {
+              "label": "Service",
+              "value": "Trade marketing"
+            }
+          ],
+          "manifesto": "Animating a banking network is not about putting up a poster and leaving. It is about being present, regular and measurable, point of sale after point of sale.",
+          "challenge": {
+            "title": "A network to keep alive, not just to set up.",
+            "paragraphs": [
+              "Ecobank Benin entrusted us with animating its distribution network. The challenge: keeping it visible, active and well executed, day after day.",
+              "A neighborhood banking network is not judged on launch day, but over time."
+            ]
+          },
+          "approach": {
+            "title": "Field execution followed end to end.",
+            "paragraphs": [
+              "Our local teams, trained and supervised directly by Toolègba, animate the network: prospecting, point-of-sale visibility, field follow-up and competitive monitoring.",
+              "Every action is tracked and reported through regular reports, via our field app."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Prospecting points of sale",
+              "text": "Identifying and activating the points of sale that matter to the network."
+            },
+            {
+              "title": "Point-of-sale visibility",
+              "text": "A clear brand presence, with POS materials and adapted supports."
+            },
+            {
+              "title": "Field animation and follow-up",
+              "text": "Local teams that are present, trained and supervised."
+            },
+            {
+              "title": "Competitive monitoring",
+              "text": "A constant eye on what happens around the network."
+            },
+            {
+              "title": "Regular reporting",
+              "text": "Daily, weekly and monthly reports."
+            },
+            {
+              "title": "A method that repeats",
+              "text": "The same approach, from one country to the next."
+            }
+          ],
+          "galleryCaptions": [
+            "Animating a point of sale.",
+            "Brand visibility on the ground.",
+            "Field follow-up of the network.",
+            "Local team in action."
+          ],
+          "process": [
+            {
+              "title": "Frame the objectives",
+              "text": "Objectives, scope and indicators defined together before launch."
+            },
+            {
+              "title": "Train the local teams",
+              "text": "Local resources, trained and supervised directly by Toolègba."
+            },
+            {
+              "title": "Animate the field",
+              "text": "A steady presence, point of sale after point of sale."
+            },
+            {
+              "title": "Measure and report",
+              "text": "Regular reports, tracked through our own field app."
+            }
+          ],
+          "outcome": {
+            "title": "A performance that traveled.",
+            "text": "Our results on this contract earned Toolègba Ecobank's trust in Togo, Guinea and Senegal."
+          },
+          "results": [
+            {
+              "value": "3",
+              "label": "more countries where Ecobank trusted us"
+            }
+          ]
+        }
+      }
+    },
+    "cotedivoire": {
+      "images": {
+        "cover": "https://picsum.photos/seed/toolegba-realisation-cotedivoire/1200/900",
+        "hero": "https://picsum.photos/seed/toolegba-case-cotedivoire-hero/1800/1000",
+        "gallery": [
+          "https://picsum.photos/seed/toolegba-case-cotedivoire-g1/1000/760",
+          "https://picsum.photos/seed/toolegba-case-cotedivoire-g2/1000/760",
+          "https://picsum.photos/seed/toolegba-case-cotedivoire-g3/1000/760",
+          "https://picsum.photos/seed/toolegba-case-cotedivoire-g4/1000/760"
+        ]
+      },
+      "fr": {
+        "countryLabel": "Côte d'Ivoire",
+        "city": "Abidjan",
+        "title": "MTN Côte d'Ivoire, réseau Mobile Money.",
+        "service": "Distribution : réseau agents",
+        "description": "Déploiement et animation du réseau d'agents et marchands Mobile Money pour MTN Côte d'Ivoire, avec le même modèle qui a déjà fait ses preuves ailleurs sur le continent.",
+        "tags": [
+          "Distribution",
+          "Mobile Money",
+          "Réseau agents"
+        ],
+        "page": {
+          "headline": "Un réseau Mobile Money déployé avec un modèle éprouvé.",
+          "intro": "Pour MTN Côte d'Ivoire, nous déployons et animons le réseau d'agents et de marchands Mobile Money, avec le modèle qui a fait ses preuves ailleurs sur le continent.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "MTN Côte d'Ivoire"
+            },
+            {
+              "label": "Marché",
+              "value": "Côte d'Ivoire, Abidjan"
+            },
+            {
+              "label": "Service",
+              "value": "Distribution"
+            }
+          ],
+          "manifesto": "Un service Mobile Money n'existe que là où on peut y accéder : chaque agent et chaque marchand actif rapproche le service du client.",
+          "challenge": {
+            "title": "Rendre le service accessible, partout.",
+            "paragraphs": [
+              "Un réseau Mobile Money repose sur ses agents, qui permettent de déposer et de retirer, et sur ses marchands, qui acceptent les paiements.",
+              "Il faut les déployer, les animer et les suivre dans la durée."
+            ]
+          },
+          "approach": {
+            "title": "Un modèle éprouvé, adapté au marché ivoirien.",
+            "paragraphs": [
+              "Nous appliquons la méthode déjà éprouvée dans d'autres pays d'Afrique : déploiement, animation et suivi du réseau par des équipes locales formées.",
+              "Le pilotage s'appuie sur des indicateurs clairs, comme les agents actifs et les marchands accepteurs, restitués par des rapports réguliers."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Déploiement des agents",
+              "text": "Recruter et équiper les agents qui rendent le service accessible."
+            },
+            {
+              "title": "Réseau de marchands",
+              "text": "Des marchands accepteurs actifs, animés dans la durée."
+            },
+            {
+              "title": "Gestion de stock",
+              "text": "Un approvisionnement suivi, jusqu'au point de vente."
+            },
+            {
+              "title": "Service client et après-vente",
+              "text": "Un accompagnement continu du réseau et de ses clients."
+            },
+            {
+              "title": "Animation continue",
+              "text": "Des équipes locales présentes, formées et encadrées."
+            },
+            {
+              "title": "Reporting régulier",
+              "text": "Des rapports quotidiens, hebdomadaires et mensuels."
+            }
+          ],
+          "galleryCaptions": [
+            "Animation d'un point de vente.",
+            "Visibilité de la marque sur le terrain.",
+            "Suivi terrain du réseau.",
+            "Équipe locale en action."
+          ],
+          "process": [
+            {
+              "title": "Cadrer les objectifs",
+              "text": "Objectifs, périmètre et indicateurs définis ensemble avant le lancement."
+            },
+            {
+              "title": "Former les équipes locales",
+              "text": "Des ressources locales, formées et encadrées directement par Toolègba."
+            },
+            {
+              "title": "Animer le terrain",
+              "text": "Une présence régulière, point de vente après point de vente."
+            },
+            {
+              "title": "Mesurer et restituer",
+              "text": "Des rapports réguliers, suivis via notre application terrain."
+            }
+          ],
+          "outcome": {
+            "title": "Un modèle qui se répète.",
+            "text": "Ce que nous avons appris ailleurs sur le continent, nous l'appliquons à Abidjan, avec des équipes locales."
+          },
+          "results": []
+        }
+      },
+      "en": {
+        "countryLabel": "Ivory Coast",
+        "city": "Abidjan",
+        "title": "MTN Ivory Coast, Mobile Money network.",
+        "service": "Distribution: agent network",
+        "description": "Deployment and animation of MTN Ivory Coast's Mobile Money agent and merchant network, using the same model already proven elsewhere on the continent.",
+        "tags": [
+          "Distribution",
+          "Mobile Money",
+          "Agent network"
+        ],
+        "page": {
+          "headline": "A Mobile Money network deployed with a proven model.",
+          "intro": "For MTN Ivory Coast, we deploy and animate the Mobile Money agent and merchant network, with the model that has proven itself elsewhere on the continent.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "MTN Ivory Coast"
+            },
+            {
+              "label": "Market",
+              "value": "Ivory Coast, Abidjan"
+            },
+            {
+              "label": "Service",
+              "value": "Distribution"
+            }
+          ],
+          "manifesto": "A Mobile Money service only exists where people can reach it: every active agent and merchant brings the service closer to the customer.",
+          "challenge": {
+            "title": "Making the service accessible, everywhere.",
+            "paragraphs": [
+              "A Mobile Money network relies on its agents, who make deposits and withdrawals possible, and on its merchants, who accept payments.",
+              "They have to be deployed, animated and followed over time."
+            ]
+          },
+          "approach": {
+            "title": "A proven model, adapted to the Ivorian market.",
+            "paragraphs": [
+              "We apply the method already proven in other African countries: deployment, animation and follow-up of the network by trained local teams.",
+              "Steering relies on clear indicators, such as active agents and accepting merchants, reported through regular reports."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Deploying agents",
+              "text": "Recruiting and equipping the agents who make the service accessible."
+            },
+            {
+              "title": "Merchant network",
+              "text": "Active accepting merchants, animated over time."
+            },
+            {
+              "title": "Stock management",
+              "text": "Tracked supply, all the way to the point of sale."
+            },
+            {
+              "title": "Customer service and after-sales",
+              "text": "Continuous support for the network and its customers."
+            },
+            {
+              "title": "Continuous animation",
+              "text": "Local teams that are present, trained and supervised."
+            },
+            {
+              "title": "Regular reporting",
+              "text": "Daily, weekly and monthly reports."
+            }
+          ],
+          "galleryCaptions": [
+            "Animating a point of sale.",
+            "Brand visibility on the ground.",
+            "Field follow-up of the network.",
+            "Local team in action."
+          ],
+          "process": [
+            {
+              "title": "Frame the objectives",
+              "text": "Objectives, scope and indicators defined together before launch."
+            },
+            {
+              "title": "Train the local teams",
+              "text": "Local resources, trained and supervised directly by Toolègba."
+            },
+            {
+              "title": "Animate the field",
+              "text": "A steady presence, point of sale after point of sale."
+            },
+            {
+              "title": "Measure and report",
+              "text": "Regular reports, tracked through our own field app."
+            }
+          ],
+          "outcome": {
+            "title": "A model that repeats.",
+            "text": "What we learned elsewhere on the continent, we apply in Abidjan, with local teams."
+          },
+          "results": []
+        }
+      }
+    },
+    "cameroun": {
+      "images": {
+        "cover": "https://picsum.photos/seed/toolegba-realisation-cameroun/1200/900",
+        "hero": "https://picsum.photos/seed/toolegba-case-cameroun-hero/1800/1000",
+        "gallery": [
+          "https://picsum.photos/seed/toolegba-case-cameroun-g1/1000/760",
+          "https://picsum.photos/seed/toolegba-case-cameroun-g2/1000/760",
+          "https://picsum.photos/seed/toolegba-case-cameroun-g3/1000/760",
+          "https://picsum.photos/seed/toolegba-case-cameroun-g4/1000/760"
+        ]
+      },
+      "fr": {
+        "countryLabel": "Cameroun",
+        "city": "Douala",
+        "title": "Présence terrain, Cameroun.",
+        "service": "Services consumer",
+        "description": "Notre équipe locale au Cameroun applique la même approche de contact direct avec le consommateur qui a fait notre réputation dans les six pays où nous opérons.",
+        "tags": [
+          "Services consumer",
+          "Présence locale"
+        ],
+        "page": {
+          "headline": "Le contact direct avec le consommateur, à Douala.",
+          "intro": "Notre équipe locale au Cameroun applique la même approche de contact direct avec le consommateur qui a fait notre réputation dans les six pays où nous opérons.",
+          "facts": [
+            {
+              "label": "Équipe",
+              "value": "Équipe locale au Cameroun"
+            },
+            {
+              "label": "Marché",
+              "value": "Cameroun, Douala"
+            },
+            {
+              "label": "Service",
+              "value": "Services consumer"
+            }
+          ],
+          "manifesto": "Là où les médias classiques ne suffisent plus, c'est la conversation en face à face qui fait la différence.",
+          "challenge": {
+            "title": "Aller à la rencontre du consommateur, là où il se trouve.",
+            "paragraphs": [
+              "Au Cameroun comme ailleurs, les médias classiques atteignent leurs limites. Le contact direct fait la différence.",
+              "Cela demande des équipes qui connaissent le terrain, la langue et les habitudes locales."
+            ]
+          },
+          "approach": {
+            "title": "Une équipe locale, formée par Toolègba.",
+            "paragraphs": [
+              "Nous nous appuyons sur des ressources camerounaises, formées et encadrées directement, pour la sensibilisation, le recrutement, la vente et le conseil.",
+              "Le suivi terrain est restitué par des rapports réguliers, comme dans nos autres pays."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Sensibilisation",
+              "text": "Aller à la rencontre du consommateur pour expliquer et convaincre."
+            },
+            {
+              "title": "Recrutement",
+              "text": "Recruter de nouveaux clients, en face à face."
+            },
+            {
+              "title": "Vente",
+              "text": "Un contact direct, qui transforme l'intérêt en achat."
+            },
+            {
+              "title": "Conseil",
+              "text": "Un accompagnement personnalisé, sur le terrain."
+            },
+            {
+              "title": "Présence locale",
+              "text": "Une équipe qui connaît le marché et ses codes."
+            },
+            {
+              "title": "Reporting régulier",
+              "text": "Des rapports quotidiens, hebdomadaires et mensuels."
+            }
+          ],
+          "galleryCaptions": [
+            "Animation d'un point de vente.",
+            "Visibilité de la marque sur le terrain.",
+            "Suivi terrain du réseau.",
+            "Équipe locale en action."
+          ],
+          "process": [
+            {
+              "title": "Cadrer les objectifs",
+              "text": "Objectifs, périmètre et indicateurs définis ensemble avant le lancement."
+            },
+            {
+              "title": "Former les équipes locales",
+              "text": "Des ressources locales, formées et encadrées directement par Toolègba."
+            },
+            {
+              "title": "Animer le terrain",
+              "text": "Une présence régulière, point de vente après point de vente."
+            },
+            {
+              "title": "Mesurer et restituer",
+              "text": "Des rapports réguliers, suivis via notre application terrain."
+            }
+          ],
+          "outcome": {
+            "title": "Une présence durable.",
+            "text": "Le Cameroun fait partie des six pays où Toolègba est aujourd'hui actif."
+          },
+          "results": []
+        }
+      },
+      "en": {
+        "countryLabel": "Cameroon",
+        "city": "Douala",
+        "title": "Field presence, Cameroon.",
+        "service": "Consumer services",
+        "description": "Our local team in Cameroon applies the same direct-consumer-contact approach that's built our reputation across the six countries where we operate.",
+        "tags": [
+          "Consumer services",
+          "Local presence"
+        ],
+        "page": {
+          "headline": "Direct contact with the consumer, in Douala.",
+          "intro": "Our local team in Cameroon applies the same direct-contact approach with the consumer that built our reputation across the six countries where we operate.",
+          "facts": [
+            {
+              "label": "Team",
+              "value": "Local team in Cameroon"
+            },
+            {
+              "label": "Market",
+              "value": "Cameroon, Douala"
+            },
+            {
+              "label": "Service",
+              "value": "Consumer services"
+            }
+          ],
+          "manifesto": "Where classic media no longer suffice, it is the face-to-face conversation that makes the difference.",
+          "challenge": {
+            "title": "Going to meet the consumer, where they are.",
+            "paragraphs": [
+              "In Cameroon as elsewhere, classic media reach their limits. Direct contact makes the difference.",
+              "It takes teams who know the ground, the language and the local habits."
+            ]
+          },
+          "approach": {
+            "title": "A local team, trained by Toolègba.",
+            "paragraphs": [
+              "We rely on Cameroonian resources, trained and supervised directly, for outreach, recruitment, sales and advice.",
+              "Field follow-up is reported through regular reports, as in our other countries."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Outreach",
+              "text": "Going to meet the consumer to explain and convince."
+            },
+            {
+              "title": "Recruitment",
+              "text": "Recruiting new customers, face to face."
+            },
+            {
+              "title": "Sales",
+              "text": "Direct contact that turns interest into a purchase."
+            },
+            {
+              "title": "Advice",
+              "text": "Personal guidance, on the ground."
+            },
+            {
+              "title": "Local presence",
+              "text": "A team that knows the market and its codes."
+            },
+            {
+              "title": "Regular reporting",
+              "text": "Daily, weekly and monthly reports."
+            }
+          ],
+          "galleryCaptions": [
+            "Animating a point of sale.",
+            "Brand visibility on the ground.",
+            "Field follow-up of the network.",
+            "Local team in action."
+          ],
+          "process": [
+            {
+              "title": "Frame the objectives",
+              "text": "Objectives, scope and indicators defined together before launch."
+            },
+            {
+              "title": "Train the local teams",
+              "text": "Local resources, trained and supervised directly by Toolègba."
+            },
+            {
+              "title": "Animate the field",
+              "text": "A steady presence, point of sale after point of sale."
+            },
+            {
+              "title": "Measure and report",
+              "text": "Regular reports, tracked through our own field app."
+            }
+          ],
+          "outcome": {
+            "title": "A lasting presence.",
+            "text": "Cameroon is one of the six countries where Toolègba is active today."
+          },
+          "results": []
+        }
+      }
+    },
+    "guinee": {
+      "images": {
+        "cover": "https://picsum.photos/seed/toolegba-realisation-guinee/1200/900",
+        "hero": "https://picsum.photos/seed/toolegba-case-guinee-hero/1800/1000",
+        "gallery": [
+          "https://picsum.photos/seed/toolegba-case-guinee-g1/1000/760",
+          "https://picsum.photos/seed/toolegba-case-guinee-g2/1000/760",
+          "https://picsum.photos/seed/toolegba-case-guinee-g3/1000/760",
+          "https://picsum.photos/seed/toolegba-case-guinee-g4/1000/760"
+        ]
+      },
+      "fr": {
+        "countryLabel": "Guinée",
+        "city": "Conakry",
+        "title": "Ecobank Guinée, extension trade marketing.",
+        "service": "Trade marketing : réseau bancaire",
+        "description": "Après nos résultats au Bénin, Ecobank nous a confié l'animation de son réseau en Guinée, avec la même méthode et les mêmes standards d'exécution.",
+        "tags": [
+          "Trade marketing",
+          "Réseau bancaire",
+          "Extension régionale"
+        ],
+        "page": {
+          "headline": "Même méthode, nouveau pays : Ecobank nous confie la Guinée.",
+          "intro": "Après nos résultats au Bénin, Ecobank nous a confié l'animation de son réseau en Guinée, avec la même méthode et les mêmes standards d'exécution.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Ecobank Guinée"
+            },
+            {
+              "label": "Marché",
+              "value": "Guinée, Conakry"
+            },
+            {
+              "label": "Service",
+              "value": "Trade marketing"
+            }
+          ],
+          "manifesto": "Une méthode qui fonctionne dans un pays doit pouvoir se répéter dans le suivant, sans perdre en rigueur.",
+          "challenge": {
+            "title": "Reproduire un standard d'exécution dans un nouveau marché.",
+            "paragraphs": [
+              "Étendre l'animation du réseau Ecobank à la Guinée, avec le même niveau d'exigence qu'au Bénin.",
+              "Chaque pays a ses codes : les équipes, les langues et les habitudes d'achat changent, pas le standard."
+            ]
+          },
+          "approach": {
+            "title": "La même méthode, portée par des équipes locales.",
+            "paragraphs": [
+              "Nous mobilisons des ressources locales, formées et encadrées directement, pour appliquer la méthode déjà éprouvée au Bénin.",
+              "Le suivi et le reporting restent identiques, pour piloter d'un pays à l'autre."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Prospection des points de vente",
+              "text": "Identifier et activer les points de vente qui comptent pour le réseau."
+            },
+            {
+              "title": "Visibilité en point de vente",
+              "text": "Une présence de marque claire, avec PLV et supports adaptés."
+            },
+            {
+              "title": "Animation et suivi terrain",
+              "text": "Des équipes locales présentes, formées et encadrées."
+            },
+            {
+              "title": "Veille concurrentielle",
+              "text": "Un regard permanent sur ce qui se passe autour du réseau."
+            },
+            {
+              "title": "Reporting régulier",
+              "text": "Des rapports quotidiens, hebdomadaires et mensuels."
+            },
+            {
+              "title": "Une méthode qui se répète",
+              "text": "La même approche, d'un pays à l'autre."
+            }
+          ],
+          "galleryCaptions": [
+            "Animation d'un point de vente.",
+            "Visibilité de la marque sur le terrain.",
+            "Suivi terrain du réseau.",
+            "Équipe locale en action."
+          ],
+          "process": [
+            {
+              "title": "Cadrer les objectifs",
+              "text": "Objectifs, périmètre et indicateurs définis ensemble avant le lancement."
+            },
+            {
+              "title": "Former les équipes locales",
+              "text": "Des ressources locales, formées et encadrées directement par Toolègba."
+            },
+            {
+              "title": "Animer le terrain",
+              "text": "Une présence régulière, point de vente après point de vente."
+            },
+            {
+              "title": "Mesurer et restituer",
+              "text": "Des rapports réguliers, suivis via notre application terrain."
+            }
+          ],
+          "outcome": {
+            "title": "Une extension régionale.",
+            "text": "Ecobank nous a confié l'animation de son réseau en Guinée, après nos résultats au Bénin."
+          },
+          "results": []
+        }
+      },
+      "en": {
+        "countryLabel": "Guinea",
+        "city": "Conakry",
+        "title": "Ecobank Guinea, trade marketing rollout.",
+        "service": "Trade marketing: banking network",
+        "description": "Following our results in Benin, Ecobank entrusted us with animating its network in Guinea too, using the same method and execution standards.",
+        "tags": [
+          "Trade marketing",
+          "Banking network",
+          "Regional rollout"
+        ],
+        "page": {
+          "headline": "Same method, new country: Ecobank entrusts us with Guinea.",
+          "intro": "Following our results in Benin, Ecobank entrusted us with animating its network in Guinea, using the same method and the same execution standards.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Ecobank Guinea"
+            },
+            {
+              "label": "Market",
+              "value": "Guinea, Conakry"
+            },
+            {
+              "label": "Service",
+              "value": "Trade marketing"
+            }
+          ],
+          "manifesto": "A method that works in one country should be repeatable in the next, without losing rigor.",
+          "challenge": {
+            "title": "Reproducing an execution standard in a new market.",
+            "paragraphs": [
+              "Extending the animation of the Ecobank network to Guinea, with the same level of demand as in Benin.",
+              "Every country has its own codes: teams, languages and buying habits change, not the standard."
+            ]
+          },
+          "approach": {
+            "title": "The same method, carried by local teams.",
+            "paragraphs": [
+              "We mobilize local resources, trained and supervised directly, to apply the method already proven in Benin.",
+              "Follow-up and reporting stay identical, so we can steer from one country to the next."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Prospecting points of sale",
+              "text": "Identifying and activating the points of sale that matter to the network."
+            },
+            {
+              "title": "Point-of-sale visibility",
+              "text": "A clear brand presence, with POS materials and adapted supports."
+            },
+            {
+              "title": "Field animation and follow-up",
+              "text": "Local teams that are present, trained and supervised."
+            },
+            {
+              "title": "Competitive monitoring",
+              "text": "A constant eye on what happens around the network."
+            },
+            {
+              "title": "Regular reporting",
+              "text": "Daily, weekly and monthly reports."
+            },
+            {
+              "title": "A method that repeats",
+              "text": "The same approach, from one country to the next."
+            }
+          ],
+          "galleryCaptions": [
+            "Animating a point of sale.",
+            "Brand visibility on the ground.",
+            "Field follow-up of the network.",
+            "Local team in action."
+          ],
+          "process": [
+            {
+              "title": "Frame the objectives",
+              "text": "Objectives, scope and indicators defined together before launch."
+            },
+            {
+              "title": "Train the local teams",
+              "text": "Local resources, trained and supervised directly by Toolègba."
+            },
+            {
+              "title": "Animate the field",
+              "text": "A steady presence, point of sale after point of sale."
+            },
+            {
+              "title": "Measure and report",
+              "text": "Regular reports, tracked through our own field app."
+            }
+          ],
+          "outcome": {
+            "title": "A regional rollout.",
+            "text": "Ecobank entrusted us with animating its network in Guinea, following our results in Benin."
+          },
+          "results": []
+        }
+      }
+    },
+    "togo": {
+      "images": {
+        "cover": "https://picsum.photos/seed/toolegba-realisation-togo/1200/900",
+        "hero": "https://picsum.photos/seed/toolegba-case-togo-hero/1800/1000",
+        "gallery": [
+          "https://picsum.photos/seed/toolegba-case-togo-g1/1000/760",
+          "https://picsum.photos/seed/toolegba-case-togo-g2/1000/760",
+          "https://picsum.photos/seed/toolegba-case-togo-g3/1000/760",
+          "https://picsum.photos/seed/toolegba-case-togo-g4/1000/760"
+        ]
+      },
+      "fr": {
+        "countryLabel": "Togo",
+        "city": "Lomé",
+        "title": "Ecobank Togo, extension trade marketing.",
+        "service": "Trade marketing : réseau bancaire",
+        "description": "Le même contrat de confiance renouvelé au Togo : animation terrain et développement du réseau de distribution pour Ecobank.",
+        "tags": [
+          "Trade marketing",
+          "Réseau bancaire",
+          "Extension régionale"
+        ],
+        "page": {
+          "headline": "Un contrat de confiance, renouvelé au Togo.",
+          "intro": "Au Togo, le même contrat de confiance est renouvelé : animation terrain et développement du réseau de distribution pour Ecobank.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Ecobank Togo"
+            },
+            {
+              "label": "Marché",
+              "value": "Togo, Lomé"
+            },
+            {
+              "label": "Service",
+              "value": "Trade marketing"
+            }
+          ],
+          "manifesto": "La confiance d'un client se gagne sur le terrain, et se traduit ensuite par de nouveaux marchés.",
+          "challenge": {
+            "title": "Développer un réseau de distribution, à Lomé et au-delà.",
+            "paragraphs": [
+              "Ecobank Togo nous confie l'animation terrain et le développement de son réseau de distribution.",
+              "L'enjeu : offrir au réseau togolais le même niveau d'exécution que dans les autres pays."
+            ]
+          },
+          "approach": {
+            "title": "Une méthode déjà éprouvée, appliquée au Togo.",
+            "paragraphs": [
+              "Nos équipes locales, formées et encadrées directement, prospectent, animent et suivent le réseau sur le terrain.",
+              "Les rapports réguliers permettent de piloter le réseau et de comparer les résultats d'un pays à l'autre."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Prospection des points de vente",
+              "text": "Identifier et activer les points de vente qui comptent pour le réseau."
+            },
+            {
+              "title": "Visibilité en point de vente",
+              "text": "Une présence de marque claire, avec PLV et supports adaptés."
+            },
+            {
+              "title": "Animation et suivi terrain",
+              "text": "Des équipes locales présentes, formées et encadrées."
+            },
+            {
+              "title": "Veille concurrentielle",
+              "text": "Un regard permanent sur ce qui se passe autour du réseau."
+            },
+            {
+              "title": "Reporting régulier",
+              "text": "Des rapports quotidiens, hebdomadaires et mensuels."
+            },
+            {
+              "title": "Une méthode qui se répète",
+              "text": "La même approche, d'un pays à l'autre."
+            }
+          ],
+          "galleryCaptions": [
+            "Animation d'un point de vente.",
+            "Visibilité de la marque sur le terrain.",
+            "Suivi terrain du réseau.",
+            "Équipe locale en action."
+          ],
+          "process": [
+            {
+              "title": "Cadrer les objectifs",
+              "text": "Objectifs, périmètre et indicateurs définis ensemble avant le lancement."
+            },
+            {
+              "title": "Former les équipes locales",
+              "text": "Des ressources locales, formées et encadrées directement par Toolègba."
+            },
+            {
+              "title": "Animer le terrain",
+              "text": "Une présence régulière, point de vente après point de vente."
+            },
+            {
+              "title": "Mesurer et restituer",
+              "text": "Des rapports réguliers, suivis via notre application terrain."
+            }
+          ],
+          "outcome": {
+            "title": "Une extension régionale.",
+            "text": "Le Togo rejoint les pays où Ecobank nous confie l'animation de son réseau."
+          },
+          "results": []
+        }
+      },
+      "en": {
+        "countryLabel": "Togo",
+        "city": "Lomé",
+        "title": "Ecobank Togo, trade marketing rollout.",
+        "service": "Trade marketing: banking network",
+        "description": "The same trusted contract renewed in Togo: field animation and distribution network development for Ecobank.",
+        "tags": [
+          "Trade marketing",
+          "Banking network",
+          "Regional rollout"
+        ],
+        "page": {
+          "headline": "A trusted contract, renewed in Togo.",
+          "intro": "In Togo, the same trusted contract is renewed: field animation and distribution network development for Ecobank.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Ecobank Togo"
+            },
+            {
+              "label": "Market",
+              "value": "Togo, Lomé"
+            },
+            {
+              "label": "Service",
+              "value": "Trade marketing"
+            }
+          ],
+          "manifesto": "A client's trust is earned in the field, and then turns into new markets.",
+          "challenge": {
+            "title": "Developing a distribution network, in Lomé and beyond.",
+            "paragraphs": [
+              "Ecobank Togo entrusts us with the field animation and development of its distribution network.",
+              "The challenge: giving the Togolese network the same level of execution as in the other countries."
+            ]
+          },
+          "approach": {
+            "title": "A proven method, applied in Togo.",
+            "paragraphs": [
+              "Our local teams, trained and supervised directly, prospect, animate and follow the network on the ground.",
+              "Regular reports make it possible to steer the network and compare results from one country to the next."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Prospecting points of sale",
+              "text": "Identifying and activating the points of sale that matter to the network."
+            },
+            {
+              "title": "Point-of-sale visibility",
+              "text": "A clear brand presence, with POS materials and adapted supports."
+            },
+            {
+              "title": "Field animation and follow-up",
+              "text": "Local teams that are present, trained and supervised."
+            },
+            {
+              "title": "Competitive monitoring",
+              "text": "A constant eye on what happens around the network."
+            },
+            {
+              "title": "Regular reporting",
+              "text": "Daily, weekly and monthly reports."
+            },
+            {
+              "title": "A method that repeats",
+              "text": "The same approach, from one country to the next."
+            }
+          ],
+          "galleryCaptions": [
+            "Animating a point of sale.",
+            "Brand visibility on the ground.",
+            "Field follow-up of the network.",
+            "Local team in action."
+          ],
+          "process": [
+            {
+              "title": "Frame the objectives",
+              "text": "Objectives, scope and indicators defined together before launch."
+            },
+            {
+              "title": "Train the local teams",
+              "text": "Local resources, trained and supervised directly by Toolègba."
+            },
+            {
+              "title": "Animate the field",
+              "text": "A steady presence, point of sale after point of sale."
+            },
+            {
+              "title": "Measure and report",
+              "text": "Regular reports, tracked through our own field app."
+            }
+          ],
+          "outcome": {
+            "title": "A regional rollout.",
+            "text": "Togo joins the countries where Ecobank entrusts us with animating its network."
+          },
+          "results": []
+        }
+      }
+    },
+    "senegal": {
+      "images": {
+        "cover": "https://picsum.photos/seed/toolegba-realisation-senegal/1200/900",
+        "hero": "https://picsum.photos/seed/toolegba-case-senegal-hero/1800/1000",
+        "gallery": [
+          "https://picsum.photos/seed/toolegba-case-senegal-g1/1000/760",
+          "https://picsum.photos/seed/toolegba-case-senegal-g2/1000/760",
+          "https://picsum.photos/seed/toolegba-case-senegal-g3/1000/760",
+          "https://picsum.photos/seed/toolegba-case-senegal-g4/1000/760"
+        ]
+      },
+      "fr": {
+        "countryLabel": "Sénégal",
+        "city": "Dakar",
+        "title": "Réseau Mobile Money, Sénégal.",
+        "service": "Distribution : réseau agents et marchands",
+        "description": "En trois ans et demi, nous avons fait passer ce réseau de 2 000 à 26 000 agents actifs et de 300 à 18 000 marchands accepteurs, avec plus de 53 000 points de convergence créés.",
+        "tags": [
+          "Distribution",
+          "Mobile Money",
+          "Croissance réseau"
+        ],
+        "page": {
+          "headline": "De 2 000 à 26 000 agents actifs en trois ans et demi.",
+          "intro": "Nous avons fait passer ce réseau Mobile Money de 2 000 à 26 000 agents actifs et de 300 à 18 000 marchands accepteurs, avec plus de 53 000 points de convergence créés.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Réseau Mobile Money"
+            },
+            {
+              "label": "Marché",
+              "value": "Sénégal, Dakar"
+            },
+            {
+              "label": "Service",
+              "value": "Distribution"
+            }
+          ],
+          "manifesto": "Passer de 2 000 à 26 000 agents ne se fait pas par hasard : cela demande une méthode, des équipes et un suivi sans relâche.",
+          "challenge": {
+            "title": "Changer d'échelle sans perdre le contrôle.",
+            "paragraphs": [
+              "Faire grandir un réseau d'agents et de marchands, c'est multiplier les points de contact tout en gardant la qualité d'exécution.",
+              "Le défi : passer de quelques milliers d'agents à plusieurs dizaines de milliers, dans la durée."
+            ]
+          },
+          "approach": {
+            "title": "Recruter, animer, mesurer.",
+            "paragraphs": [
+              "Nous avons déployé et animé le réseau d'agents et de marchands avec des équipes locales formées et encadrées directement.",
+              "Chaque étape est suivie par des indicateurs : agents actifs, marchands accepteurs, points de convergence."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Déploiement des agents",
+              "text": "Recruter et équiper les agents qui rendent le service accessible."
+            },
+            {
+              "title": "Réseau de marchands",
+              "text": "Des marchands accepteurs actifs, animés dans la durée."
+            },
+            {
+              "title": "Gestion de stock",
+              "text": "Un approvisionnement suivi, jusqu'au point de vente."
+            },
+            {
+              "title": "Service client et après-vente",
+              "text": "Un accompagnement continu du réseau et de ses clients."
+            },
+            {
+              "title": "Animation continue",
+              "text": "Des équipes locales présentes, formées et encadrées."
+            },
+            {
+              "title": "Reporting régulier",
+              "text": "Des rapports quotidiens, hebdomadaires et mensuels."
+            }
+          ],
+          "galleryCaptions": [
+            "Animation d'un point de vente.",
+            "Visibilité de la marque sur le terrain.",
+            "Suivi terrain du réseau.",
+            "Équipe locale en action."
+          ],
+          "process": [
+            {
+              "title": "Cadrer les objectifs",
+              "text": "Objectifs, périmètre et indicateurs définis ensemble avant le lancement."
+            },
+            {
+              "title": "Former les équipes locales",
+              "text": "Des ressources locales, formées et encadrées directement par Toolègba."
+            },
+            {
+              "title": "Animer le terrain",
+              "text": "Une présence régulière, point de vente après point de vente."
+            },
+            {
+              "title": "Mesurer et restituer",
+              "text": "Des rapports réguliers, suivis via notre application terrain."
+            }
+          ],
+          "outcome": {
+            "title": "Un réseau qui a changé d'échelle.",
+            "text": "En trois ans et demi, le réseau est passé de 2 000 à 26 000 agents actifs et de 300 à 18 000 marchands accepteurs, avec plus de 53 000 points de convergence créés."
+          },
+          "results": [
+            {
+              "value": "2 000 → 26 000",
+              "label": "agents actifs"
+            },
+            {
+              "value": "300 → 18 000",
+              "label": "marchands accepteurs"
+            },
+            {
+              "value": "53 000+",
+              "label": "points de convergence créés"
+            }
+          ]
+        }
+      },
+      "en": {
+        "countryLabel": "Senegal",
+        "city": "Dakar",
+        "title": "Mobile Money network, Senegal.",
+        "service": "Distribution: agent & merchant network",
+        "description": "In three and a half years, we grew this network from 2,000 to 26,000 active agents and from 300 to 18,000 accepting merchants, creating more than 53,000 points of convergence along the way.",
+        "tags": [
+          "Distribution",
+          "Mobile Money",
+          "Network growth"
+        ],
+        "page": {
+          "headline": "From 2,000 to 26,000 active agents in three and a half years.",
+          "intro": "We grew this Mobile Money network from 2,000 to 26,000 active agents and from 300 to 18,000 accepting merchants, creating more than 53,000 points of convergence.",
+          "facts": [
+            {
+              "label": "Client",
+              "value": "Mobile Money network"
+            },
+            {
+              "label": "Market",
+              "value": "Senegal, Dakar"
+            },
+            {
+              "label": "Service",
+              "value": "Distribution"
+            }
+          ],
+          "manifesto": "Going from 2,000 to 26,000 agents does not happen by chance: it takes a method, teams and relentless follow-up.",
+          "challenge": {
+            "title": "Scaling up without losing control.",
+            "paragraphs": [
+              "Growing a network of agents and merchants means multiplying contact points while keeping execution quality.",
+              "The challenge: going from a few thousand agents to several tens of thousands, over time."
+            ]
+          },
+          "approach": {
+            "title": "Recruit, animate, measure.",
+            "paragraphs": [
+              "We deployed and animated the network of agents and merchants with local teams trained and supervised directly.",
+              "Every step is tracked by indicators: active agents, accepting merchants, points of convergence."
+            ]
+          },
+          "highlights": [
+            {
+              "title": "Deploying agents",
+              "text": "Recruiting and equipping the agents who make the service accessible."
+            },
+            {
+              "title": "Merchant network",
+              "text": "Active accepting merchants, animated over time."
+            },
+            {
+              "title": "Stock management",
+              "text": "Tracked supply, all the way to the point of sale."
+            },
+            {
+              "title": "Customer service and after-sales",
+              "text": "Continuous support for the network and its customers."
+            },
+            {
+              "title": "Continuous animation",
+              "text": "Local teams that are present, trained and supervised."
+            },
+            {
+              "title": "Regular reporting",
+              "text": "Daily, weekly and monthly reports."
+            }
+          ],
+          "galleryCaptions": [
+            "Animating a point of sale.",
+            "Brand visibility on the ground.",
+            "Field follow-up of the network.",
+            "Local team in action."
+          ],
+          "process": [
+            {
+              "title": "Frame the objectives",
+              "text": "Objectives, scope and indicators defined together before launch."
+            },
+            {
+              "title": "Train the local teams",
+              "text": "Local resources, trained and supervised directly by Toolègba."
+            },
+            {
+              "title": "Animate the field",
+              "text": "A steady presence, point of sale after point of sale."
+            },
+            {
+              "title": "Measure and report",
+              "text": "Regular reports, tracked through our own field app."
+            }
+          ],
+          "outcome": {
+            "title": "A network that changed scale.",
+            "text": "In three and a half years, the network grew from 2,000 to 26,000 active agents and from 300 to 18,000 accepting merchants, with more than 53,000 points of convergence created."
+          },
+          "results": [
+            {
+              "value": "2,000 → 26,000",
+              "label": "active agents"
+            },
+            {
+              "value": "300 → 18,000",
+              "label": "accepting merchants"
+            },
+            {
+              "value": "53,000+",
+              "label": "points of convergence created"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
