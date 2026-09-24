@@ -14,7 +14,7 @@ export default function HeroAmbientGlow() {
   const [inHero, setInHero] = useState(true);
 
   useEffect(() => {
-    const marker = document.getElementById("slide-7-start");
+    const marker = document.getElementById("hero-closing-start");
     if (!marker) return;
 
     const update = () => {

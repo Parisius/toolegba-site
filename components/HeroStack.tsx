@@ -6,28 +6,16 @@ import Link from "next/link";
 import RevealOnView from "./RevealOnView";
 import Lightfall from "./reactbits/Lightfall";
 import TextType from "./reactbits/TextType";
+import HeroServiceCycle from "./HeroServiceCycle";
 import { useDict } from "@/lib/language/LanguageProvider";
 import { useServices } from "@/lib/language/useContent";
 import { indexImages, siteImages } from "@/lib/content";
 
-interface Slide {
-  word: string;
-  caption: string;
-  oneLine?: boolean;
-  lightfall?: boolean;
-  image?: string;
-  size?: string;
-}
+// Three macro slides: intro, the self-cycling services beat, closing.
+const TOTAL_SLIDES = 3;
 
 // Sized from the viewport (title is ~10.5em wide) so it never wraps, not even its colon.
 const INTRO_SIZE = "[font-size:min(5.5rem,calc((100vw_-_4.5rem)/11.3))]";
-
-// Long service titles get a slightly smaller type size; the rest use the default.
-const SERVICE_SIZE: Record<string, string> = {
-  operationnel: "text-[clamp(2.25rem,6.5vw,5rem)]",
-  consumer: "text-[clamp(2.25rem,6.5vw,5rem)]",
-  social: "text-[clamp(2.25rem,6vw,4.5rem)]",
-};
 
 // The greeting splash only plays on a full page load; wait for it to finish
 // before typing on the first visit, but not on later client-side navigations.
@@ -62,6 +50,11 @@ export default function HeroStack() {
   }, []);
   // The slides are sticky and stack on top of each other, so intersection
   // can't tell which one is showing; derive it from scroll progress instead.
+  // Slide i physically covers the screen for the whole scroll range
+  // [i, i+1) of slide-heights - floor (not round) matches that exactly, so
+  // "active" stays true for a slide's entire visible dwell, not just its
+  // first half (round() flips to the next slide at the midpoint, which
+  // froze HeroServiceCycle's autoplay for the second half of its screen time).
   const sectionRef = useRef<HTMLElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   useEffect(() => {
@@ -69,7 +62,7 @@ export default function HeroStack() {
       const node = sectionRef.current;
       if (!node || window.innerHeight === 0) return;
       const progress = -node.getBoundingClientRect().top / window.innerHeight;
-      setActiveSlide(Math.max(0, Math.round(progress)));
+      setActiveSlide(Math.min(TOTAL_SLIDES - 1, Math.max(0, Math.floor(progress))));
     };
     update();
     window.addEventListener("scroll", update, { passive: true });
@@ -79,82 +72,65 @@ export default function HeroStack() {
       window.removeEventListener("resize", update);
     };
   }, []);
-  // First slide is the intro; then one slide per service, straight from services.json.
-  const services = useServices();
-  const slides: Slide[] = [
-    { word: hero.intro.word, caption: hero.intro.caption, lightfall: true, oneLine: true, size: INTRO_SIZE },
-    ...services.map((service) => ({
-      word: service.hero.word,
-      caption: service.hero.caption,
-      image: service.images.hero,
-      size: SERVICE_SIZE[service.id],
-    })),
-  ];
+  // Three acts: the intro promise, a self-cycling tour of the six
+  // services (see HeroServiceCycle), then the brand/CTA close.
+  const services = useServices().map((service) => ({
+    id: service.id,
+    word: service.hero.word,
+    caption: service.hero.caption,
+    image: service.images.hero,
+  }));
 
   return (
     <section ref={sectionRef} id="hero" aria-label="Our expertise" className="relative bg-ivoire">
-      {slides.map((slide, index) => (
-        <article
-          key={slide.word}
-          onClick={advance}
-          className={OUTER}
-          style={{ zIndex: index + 1 }}
-        >
-          <div className={INNER}>
-            {slide.lightfall ? (
-              <div className="absolute inset-0 bg-petrole">
-                <Lightfall
-                  className="absolute inset-0"
-                  colors={["#2c3d4f", "#E54E3E", "#7F2B2B", "#FFAF5C", "#468F92", "#D11A1B"]}
-                  backgroundColor="#5227FF"
-                  speed={0.5}
-                  streakCount={3}
-                  streakWidth={1.1}
-                  streakLength={1.2}
-                  glow={1.1}
-                  backgroundGlow={0.15}
-                  mouseInteraction
-                  mouseStrength={0.6}
-                />
-              </div>
-            ) : (
-              <Image
-                src={slide.image!}
-                alt=""
-                fill
-                priority={index === 0}
-                className="object-cover"
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-petrole/90 via-petrole/30 to-petrole/40" />
-
-            <div className="relative flex h-full flex-col items-center justify-center px-6 text-center md:px-10">
-              <h2
-                className={`mx-auto font-display font-semibold leading-[0.95] text-white ${
-                  slide.oneLine ? "w-full whitespace-nowrap" : "max-w-4xl"
-                } ${slide.size ?? "text-[clamp(2.75rem,9vw,7rem)]"}`}
-              >
-                <TextType
-                  key={slide.word}
-                  text={slide.word}
-                  active={activeSlide === index}
-                  startDelay={index === 0 ? typeDelay.current : 300}
-                />
-              </h2>
-              <p className="mx-auto mt-6 max-w-lg font-sans text-base text-white/80 md:text-lg">
-                {slide.caption}
-              </p>
-            </div>
+      <article onClick={advance} className={OUTER} style={{ zIndex: 1 }}>
+        <div className={INNER}>
+          <div className="absolute inset-0 bg-petrole">
+            <Lightfall
+              className="absolute inset-0"
+              colors={["#2c3d4f", "#E54E3E", "#7F2B2B", "#FFAF5C", "#468F92", "#D11A1B"]}
+              backgroundColor="#5227FF"
+              speed={0.5}
+              streakCount={3}
+              streakWidth={1.1}
+              streakLength={1.2}
+              glow={1.1}
+              backgroundGlow={0.15}
+              mouseInteraction
+              mouseStrength={0.6}
+            />
           </div>
-        </article>
-      ))}
-      <div id="slide-7-start" aria-hidden="true" className="h-px w-full" />
+          <div className="absolute inset-0 bg-gradient-to-t from-petrole/90 via-petrole/30 to-petrole/40" />
+
+          <div className="relative flex h-full flex-col items-center justify-center px-6 text-center md:px-10">
+            <h2 className={`mx-auto w-full whitespace-nowrap font-display font-semibold leading-[0.95] text-white ${INTRO_SIZE}`}>
+              <TextType
+                key={hero.intro.word}
+                text={hero.intro.word}
+                active={activeSlide === 0}
+                startDelay={typeDelay.current}
+              />
+            </h2>
+            <p className="mx-auto mt-6 max-w-lg font-sans text-base text-white/80 md:text-lg">
+              {hero.intro.caption}
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article onClick={advance} className={OUTER} style={{ zIndex: 2 }}>
+        <div className={INNER}>
+          <HeroServiceCycle services={services} active={activeSlide === 1} />
+        </div>
+      </article>
+
+      <div id="hero-closing-start" aria-hidden="true" className="h-px w-full" />
       {/* Closing slide: content sits at the bottom over a dark scrim so the
           team photo stays clear; the header keeps its own top scrim. */}
       <article
         onClick={advance}
         className={OUTER}
-        style={{ zIndex: slides.length + 1 }}
+        style={{ zIndex: 3 }}
       >
         <div className={INNER}>
           <Image

@@ -8,11 +8,11 @@ export default function BottomBar() {
   const [inHero, setInHero] = useState(true);
 
   useEffect(() => {
-    // A 1px marker placed right at the start of the 7th (closing) slide -
+    // A 1px marker placed right at the start of the closing slide -
     // as soon as it's scrolled past, contact info + scroll indicator hide.
     // A direct scroll listener (rather than IntersectionObserver) avoids
     // any frame-skipping edge cases with fast/instant scroll jumps.
-    const marker = document.getElementById("slide-7-start");
+    const marker = document.getElementById("hero-closing-start");
     if (!marker) return;
 
     const update = () => {
@@ -30,7 +30,7 @@ export default function BottomBar() {
 
   return (
     <>
-      {/* Contact info - pinned low, left. Only shown over slides 1–6. */}
+      {/* Contact info - pinned low, left. Hidden once the closing slide starts. */}
       <div
         className={`pointer-events-none fixed inset-x-0 bottom-5 z-[150] flex justify-start px-6 md:bottom-6 md:px-10 ${
           inHero ? "opacity-100" : "opacity-0"
@@ -45,8 +45,7 @@ export default function BottomBar() {
         </div>
       </div>
 
-      {/* Scroll indicator - label above the animation. Only shown over
-          slides 1–6, hidden from the closing slide onward. */}
+      {/* Scroll indicator - label above the animation. Hidden once the closing slide starts. */}
       <div
         className={`pointer-events-none fixed inset-x-0 bottom-20 z-[150] flex justify-center md:bottom-24 ${
           inHero ? "opacity-100" : "opacity-0"
