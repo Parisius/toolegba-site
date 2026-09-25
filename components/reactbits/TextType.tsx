@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 /**
@@ -27,15 +27,32 @@ export default function TextType({
   pauseDuration?: number;
   startDelay?: number;
   loop?: boolean;
-  /** When false the text is cleared and typing waits until it is true again. */
+  /**
+   * When false the text is cleared and typing waits until it is true again.
+   * A non-looping text that has finished typing is never cleared or retyped,
+   * whatever `active` or `startDelay` do afterwards.
+   */
   active?: boolean;
   cursorChar?: string;
   className?: string;
 }) {
   const [count, setCount] = useState(0);
+  const finished = useRef(false);
+  const lastText = useRef(text);
+  // Only the delay at the time typing starts matters; later prop changes must not restart it.
+  const startDelayRef = useRef(startDelay);
+  if (lastText.current !== text) {
+    lastText.current = text;
+    finished.current = false;
+    startDelayRef.current = startDelay;
+  }
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCount(text.length);
+      return;
+    }
+    if (!loop && finished.current) {
       setCount(text.length);
       return;
     }
@@ -58,6 +75,8 @@ export default function TextType({
             dir = -1;
             tick();
           }, pauseDuration);
+        } else {
+          finished.current = true;
         }
       } else if (n > 0) {
         n -= 1;
@@ -69,7 +88,7 @@ export default function TextType({
       }
     };
 
-    timer = setTimeout(tick, startDelay);
+    timer = setTimeout(tick, loop ? startDelay : startDelayRef.current);
     return () => clearTimeout(timer);
   }, [text, typingSpeed, deletingSpeed, pauseDuration, startDelay, loop, active]);
 
