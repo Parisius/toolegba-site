@@ -49,9 +49,6 @@
       "allRightsReserved": "Tous droits réservés."
     },
     "sound": {
-      "question": "Activer le son ?",
-      "enable": "Activer le son",
-      "disable": "Non merci",
       "toggleOn": "Couper le son",
       "toggleOff": "Activer le son"
     }
@@ -96,9 +93,6 @@
       "allRightsReserved": "All rights reserved."
     },
     "sound": {
-      "question": "Enable sound?",
-      "enable": "Enable sound",
-      "disable": "No thanks",
       "toggleOn": "Mute sound",
       "toggleOff": "Enable sound"
     }

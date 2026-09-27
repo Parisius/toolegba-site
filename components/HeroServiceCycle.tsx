@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type PointerEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence, useAnimationFrame, useMotionValue, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useAnimationFrame, useReducedMotion } from "framer-motion";
 import { useAbout } from "@/lib/language/useContent";
 
 const ITEM_MS = 3200;
@@ -44,7 +44,6 @@ export default function HeroServiceCycle({
   const pausedUntil = useRef(0);
   const elapsed = useRef(0);
   const lastTime = useRef<number | null>(null);
-  const progress = useMotionValue(0);
 
   const eligible = active && !reduce;
 
@@ -61,10 +60,7 @@ export default function HeroServiceCycle({
     lastTime.current = time;
     if (elapsed.current >= ITEM_MS) {
       elapsed.current = 0;
-      progress.set(0);
       setIndex((i) => (i + 1) % services.length);
-    } else {
-      progress.set(elapsed.current / ITEM_MS);
     }
   });
 
@@ -73,15 +69,13 @@ export default function HeroServiceCycle({
     if (active) {
       elapsed.current = 0;
       lastTime.current = null;
-      progress.set(0);
     }
-  }, [active, progress]);
+  }, [active]);
 
   const goTo = (i: number) => {
     setIndex(i);
     elapsed.current = 0;
     lastTime.current = null;
-    progress.set(0);
     pausedUntil.current = Date.now() + RESUME_MS;
   };
 
@@ -143,10 +137,7 @@ export default function HeroServiceCycle({
           <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
         </Link>
 
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className="mt-5 flex w-full max-w-xs items-center gap-1.5 md:max-w-sm"
-        >
+        <div onClick={(e) => e.stopPropagation()} className="mt-5 flex items-center">
           {services.map((s, i) => (
             <button
               key={s.id}
@@ -154,17 +145,16 @@ export default function HeroServiceCycle({
               onClick={() => goTo(i)}
               aria-label={s.word}
               aria-current={i === index}
-              className="group/dot relative h-4 flex-1 cursor-pointer"
+              // The dot itself is small and round; the button padding is what
+              // gives it a touch-friendly ~44px tap target without making the
+              // indicator itself look oversized.
+              className="group/dot flex h-11 w-11 cursor-pointer items-center justify-center"
             >
-              <span className="absolute inset-x-0 top-1/2 h-[3px] -translate-y-1/2 overflow-hidden rounded-full bg-white/25 transition-colors group-hover/dot:bg-white/40">
-                {i < index && <span className="absolute inset-0 rounded-full bg-white" />}
-                {i === index && (
-                  <motion.span
-                    style={{ scaleX: reduce ? 1 : progress }}
-                    className="absolute inset-0 origin-left rounded-full bg-white"
-                  />
-                )}
-              </span>
+              <span
+                className={`rounded-full transition-all duration-300 group-hover/dot:bg-white/70 ${
+                  i === index ? "h-2.5 w-2.5 bg-white" : "h-1.5 w-1.5 bg-white/40"
+                }`}
+              />
             </button>
           ))}
         </div>

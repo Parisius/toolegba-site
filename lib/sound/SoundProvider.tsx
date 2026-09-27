@@ -3,43 +3,39 @@
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 
 const ENABLED_KEY = "toolegba-sound-enabled";
-const ASKED_KEY = "toolegba-sound-asked";
 const PAGE_TURN_SRC = "/sounds/page-turn.mp3";
 const VOLUME = 0.9;
 
 interface SoundContextValue {
-  /** Whether storage has been read yet - the sound prompt waits for this before deciding to show. */
-  ready: boolean;
   enabled: boolean;
-  /** Whether the user has already been asked once (this browser, ever). */
-  asked: boolean;
   enable: () => void;
   disable: () => void;
   toggle: () => void;
-  markAsked: () => void;
   playPageTurn: () => void;
 }
 
 const SoundContext = createContext<SoundContextValue | null>(null);
 
+/**
+ * Sound is off by default and silent about it - no on-load question, just
+ * the wavelength button in the header. Turning it on there is itself the
+ * user gesture that unlocks playback for the scroll-triggered plays that
+ * follow (which aren't gestures themselves).
+ */
 export function SoundProvider({ children }: { children: ReactNode }) {
-  const [ready, setReady] = useState(false);
   const [enabled, setEnabledState] = useState(false);
-  const [asked, setAskedState] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     try {
       setEnabledState(window.localStorage.getItem(ENABLED_KEY) === "1");
-      setAskedState(window.localStorage.getItem(ASKED_KEY) === "1");
     } catch {
-      // localStorage unavailable (private mode, etc.) - fall back to defaults.
+      // localStorage unavailable (private mode, etc.) - fall back to off.
     }
-    setReady(true);
   }, []);
 
-  // Built lazily on a real user gesture (the sound question's own button, or
-  // the header toggle) so the browser's autoplay policy never blocks it.
+  // Built lazily on a real user gesture (the header toggle) so the
+  // browser's autoplay policy never blocks it.
   const getAudio = () => {
     if (typeof window === "undefined") return null;
     if (!audioRef.current) {
@@ -60,13 +56,7 @@ export function SoundProvider({ children }: { children: ReactNode }) {
     }
     // Let it actually play through, right in this click handler: that's both
     // the audible confirmation the sound is on, and the most reliable way to
-    // unlock this exact element for the scroll-triggered plays that follow
-    // (which aren't gestures themselves). A previous version tried to
-    // silently play-then-pause several pooled elements at once, resetting
-    // currentTime before the play promise had even resolved - that could
-    // abort the unlock it was trying to establish, and not every element in
-    // the pool reliably got unlocked, which is why turning sound on could
-    // take several clicks before a swipe was actually audible.
+    // unlock this exact element for the scroll-triggered plays that follow.
     getAudio()?.play().catch(() => {});
   };
 
@@ -81,15 +71,6 @@ export function SoundProvider({ children }: { children: ReactNode }) {
 
   const toggle = () => (enabled ? disable() : enable());
 
-  const markAsked = () => {
-    setAskedState(true);
-    try {
-      window.localStorage.setItem(ASKED_KEY, "1");
-    } catch {
-      // Ignore write failures - worst case the prompt asks again next visit.
-    }
-  };
-
   const playPageTurn = () => {
     if (!enabled) return;
     const el = getAudio();
@@ -99,7 +80,7 @@ export function SoundProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <SoundContext.Provider value={{ ready, enabled, asked, enable, disable, toggle, markAsked, playPageTurn }}>
+    <SoundContext.Provider value={{ enabled, enable, disable, toggle, playPageTurn }}>
       {children}
     </SoundContext.Provider>
   );
