@@ -1,17 +1,22 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import RevealOnView from "./RevealOnView";
+import Lightfall from "./reactbits/Lightfall";
+import TextType from "./reactbits/TextType";
 import HeroServiceCycle from "./HeroServiceCycle";
 import { useDict } from "@/lib/language/LanguageProvider";
 import { useServices } from "@/lib/language/useContent";
 import { indexImages, siteImages } from "@/lib/content";
 
-// Two macro slides: the self-cycling opening act, then the closing.
-const TOTAL_SLIDES = 2;
+// Three slides: the intro promise, the self-cycling tour of the six
+// services (see HeroServiceCycle), then the brand/CTA close.
+const TOTAL_SLIDES = 3;
+
+// Sized from the viewport (title is ~10.5em wide) so it never wraps, not even its colon.
+const INTRO_SIZE = "[font-size:min(5.5rem,calc((100vw_-_4.5rem)/11.3))]";
 
 // The greeting splash only plays on a full page load; wait for it to finish
 // before typing on the first visit, but not on later client-side navigations.
@@ -49,17 +54,9 @@ export default function HeroStack() {
   // Slide i physically covers the screen for the whole scroll range
   // [i, i+1) of slide-heights - floor (not round) matches that exactly, so
   // "active" stays true for a slide's entire visible dwell, not just its
-  // first half (round() flips to the next slide at the midpoint, which
-  // froze HeroServiceCycle's autoplay for the second half of its screen time).
+  // first half.
   const sectionRef = useRef<HTMLElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  // 0 -> 1 across the scroll from the opening slide to the closing one. The
-  // opening slide's text (including "Nous prenons en main :") fades and drifts
-  // away over that distance, so it is gone before the closing slide arrives.
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"] });
-  // Plain formula (fully faded from halfway on, and it stays faded) rather than a range map.
-  const exitOpacity = useTransform(scrollYProgress, (p) => Math.min(1, Math.max(0, 1 - (p - 0.05) / 0.45)));
-  const exitY = useTransform(scrollYProgress, [0, 1], [0, -70]);
   useEffect(() => {
     const update = () => {
       const node = sectionRef.current;
@@ -75,8 +72,6 @@ export default function HeroStack() {
       window.removeEventListener("resize", update);
     };
   }, []);
-  // Two acts: the opening (intro promise + a self-cycling tour of the six
-  // services, see HeroServiceCycle), then the brand/CTA close.
   const services = useServices().map((service) => ({
     id: service.id,
     word: service.hero.word,
@@ -84,19 +79,63 @@ export default function HeroStack() {
     image: service.images.hero,
   }));
 
+  // Intro background: the streaking lights by default, or a video when the
+  // content is configured with lightfall: false - falls back to the lights
+  // if that's set but no video URL is actually given, rather than going blank.
+  const intro = indexImages.intro;
+  const useLightfall = intro.lightfall !== false || !intro.video;
+
   return (
     <section ref={sectionRef} id="hero" aria-label="Our expertise" className="relative bg-ivoire">
       <article onClick={advance} className={OUTER} style={{ zIndex: 1 }}>
         <div className={INNER}>
-          <HeroServiceCycle
-            lead={hero.intro.word}
-            introCaption={hero.intro.caption}
-            services={services}
-            active={activeSlide === 0}
-            leadDelay={typeDelay.current}
-            exitOpacity={exitOpacity}
-            exitY={exitY}
-          />
+          {useLightfall ? (
+            <div className="absolute inset-0 bg-petrole">
+              <Lightfall
+                className="absolute inset-0"
+                colors={["#2c3d4f", "#E54E3E", "#7F2B2B", "#FFAF5C", "#468F92", "#D11A1B"]}
+                backgroundColor="#5227FF"
+                speed={0.5}
+                streakCount={3}
+                streakWidth={1.1}
+                streakLength={1.2}
+                glow={1.1}
+                backgroundGlow={0.15}
+                mouseInteraction
+                mouseStrength={0.6}
+              />
+            </div>
+          ) : (
+            <video
+              src={intro.video!}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-petrole/90 via-petrole/30 to-petrole/40" />
+
+          <div className="relative flex h-full flex-col items-center justify-center px-6 text-center md:px-10">
+            <h2 className={`mx-auto w-full whitespace-nowrap font-display font-semibold leading-[0.95] text-white ${INTRO_SIZE}`}>
+              <TextType
+                key={hero.intro.word}
+                text={hero.intro.word}
+                active={activeSlide === 0}
+                startDelay={typeDelay.current}
+              />
+            </h2>
+            <p className="mx-auto mt-6 max-w-lg font-sans text-base text-white/80 md:text-lg">
+              {hero.intro.caption}
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article onClick={advance} className={OUTER} style={{ zIndex: 2 }}>
+        <div className={INNER}>
+          <HeroServiceCycle services={services} active={activeSlide === 1} />
         </div>
       </article>
 
@@ -106,7 +145,7 @@ export default function HeroStack() {
       <article
         onClick={advance}
         className={OUTER}
-        style={{ zIndex: 2 }}
+        style={{ zIndex: 3 }}
       >
         <div className={INNER}>
           <Image
