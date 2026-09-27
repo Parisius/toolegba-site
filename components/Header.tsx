@@ -5,8 +5,44 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage, useDict } from "@/lib/language/LanguageProvider";
+import { useSound } from "@/lib/sound/SoundProvider";
 import { siteImages } from "@/lib/content";
 import GlassSurface from "@/components/reactbits/GlassSurface";
+
+/** Wavelength icon: animated-looking bars, dimmed and slashed through when muted. */
+function SoundWaveIcon({ on, className = "h-3.5 w-3.5" }: { on: boolean; className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path d="M4 10v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
+      <path d="M8.5 7v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
+      <path d="M13 4v16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.5} />
+      <path d="M17.5 7v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
+      <path d="M22 10v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
+      {!on && <path d="M2.5 2.5 21.5 21.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />}
+    </svg>
+  );
+}
+
+/** Sound on/off switch, wired to the shared SoundProvider. Sits beside the language toggle. */
+function SoundToggle({ dark }: { dark?: boolean }) {
+  const { enabled, toggle } = useSound();
+  const { sound } = useDict();
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label={enabled ? sound.toggleOn : sound.toggleOff}
+      aria-pressed={enabled}
+      className={`flex h-8 w-8 flex-none items-center justify-center rounded-full border transition-colors ${
+        dark
+          ? "border-petrole/30 text-petrole hover:border-corail hover:text-corail"
+          : "border-white/40 text-white/90 hover:border-corail hover:text-corail"
+      }`}
+    >
+      <SoundWaveIcon on={enabled} />
+    </button>
+  );
+}
 
 /** Visual language switch, wired to the shared LanguageProvider. */
 function LanguageToggle({ dark }: { dark?: boolean }) {
@@ -123,7 +159,8 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-2 md:flex">
+            <SoundToggle dark={pastHero} />
             <LanguageToggle dark={pastHero} />
           </div>
 
@@ -154,6 +191,7 @@ export default function Header() {
               />
             </Link>
             <div className="flex items-center gap-3">
+              <SoundToggle />
               <LanguageToggle />
               <button
                 type="button"

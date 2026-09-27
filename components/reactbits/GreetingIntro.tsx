@@ -11,7 +11,7 @@ const HOLD_AFTER_LAST = 420;
 const EXIT_DURATION = 700;
 const LOAD_DURATION = GREETINGS.length * WORD_INTERVAL + HOLD_AFTER_LAST;
 
-export default function GreetingIntro() {
+export default function GreetingIntro({ onExited }: { onExited?: () => void } = {}) {
   const [index, setIndex] = useState(0);
   const [exiting, setExiting] = useState(false);
   const [mounted, setMounted] = useState(true);
@@ -39,8 +39,12 @@ export default function GreetingIntro() {
 
   useEffect(() => {
     if (!exiting) return;
-    const t = setTimeout(() => setMounted(false), EXIT_DURATION);
+    const t = setTimeout(() => {
+      setMounted(false);
+      onExited?.();
+    }, EXIT_DURATION);
     return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [exiting]);
 
   if (!mounted) return null;

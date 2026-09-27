@@ -245,6 +245,17 @@ export default function Footer() {
             </a>
           </div>
           */}
+          <p>
+            Made with ❤️ by{" "}
+            <a
+              href="https://dreamxr.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              Dreamxr.io
+            </a>
+          </p>
         </div>
       </div>
     </footer>

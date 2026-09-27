@@ -10,6 +10,8 @@ import HeroServiceCycle from "./HeroServiceCycle";
 import { useDict } from "@/lib/language/LanguageProvider";
 import { useServices } from "@/lib/language/useContent";
 import { indexImages, siteImages } from "@/lib/content";
+import { useSound } from "@/lib/sound/SoundProvider";
+import { useIntroOverlay } from "@/lib/intro/IntroOverlayProvider";
 
 // Three slides: the intro promise, the self-cycling tour of the six
 // services (see HeroServiceCycle), then the brand/CTA close.
@@ -17,10 +19,6 @@ const TOTAL_SLIDES = 3;
 
 // Sized from the viewport (title is ~10.5em wide) so it never wraps, not even its colon.
 const INTRO_SIZE = "[font-size:min(5.5rem,calc((100vw_-_4.5rem)/11.3))]";
-
-// The greeting splash only plays on a full page load; wait for it to finish
-// before typing on the first visit, but not on later client-side navigations.
-let introPlayed = false;
 
 /** Clicking/tapping anywhere on a slide advances to the next one. */
 function advance() {
@@ -39,16 +37,11 @@ const INNER = "absolute inset-3 overflow-hidden rounded-[28px] md:inset-4";
 
 export default function HeroStack() {
   const { hero } = useDict();
-  // Long delay only for the very first typing; a language switch retypes fast.
-  const typeDelay = useRef(introPlayed ? 300 : 2700);
-  useEffect(() => {
-    const wait = typeDelay.current;
-    introPlayed = true;
-    const t = setTimeout(() => {
-      typeDelay.current = 300;
-    }, wait);
-    return () => clearTimeout(t);
-  }, []);
+  // Gates the hero title's typing on the real "first-load overlays are
+  // gone" signal (sound question, then greeting screen) rather than a
+  // guessed delay - the sound question's own duration depends on how long
+  // the visitor takes to answer it, which a fixed timer can't know.
+  const { overlayDone } = useIntroOverlay();
   // The slides are sticky and stack on top of each other, so intersection
   // can't tell which one is showing; derive it from scroll progress instead.
   // Slide i physically covers the screen for the whole scroll range
@@ -57,14 +50,36 @@ export default function HeroStack() {
   // first half.
   const sectionRef = useRef<HTMLElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  // Always call the latest playPageTurn without making the scroll effect
+  // below depend on it - that function's identity changes on every
+  // SoundProvider render (e.g. toggling sound in the header), which would
+  // otherwise tear down and rebuild the listeners below on unrelated clicks.
+  const { playPageTurn } = useSound();
+  const playPageTurnRef = useRef(playPageTurn);
   useEffect(() => {
-    const update = () => {
-      const node = sectionRef.current;
-      if (!node || window.innerHeight === 0) return;
+    playPageTurnRef.current = playPageTurn;
+  });
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+    const compute = () => {
+      if (window.innerHeight === 0) return null;
       const progress = -node.getBoundingClientRect().top / window.innerHeight;
-      setActiveSlide(Math.min(TOTAL_SLIDES - 1, Math.max(0, Math.floor(progress))));
+      return Math.min(TOTAL_SLIDES - 1, Math.max(0, Math.floor(progress)));
     };
-    update();
+    // The very first measurement just establishes where we actually are on
+    // load (e.g. a mid-page refresh) - it's a baseline, never a "swipe", so
+    // it's tracked in a plain closure variable rather than going through the
+    // same comparison the real scroll/resize-driven updates below use.
+    let current = compute();
+    if (current !== null) setActiveSlide(current);
+    const update = () => {
+      const next = compute();
+      if (next === null) return;
+      setActiveSlide(next);
+      if (current !== null && next !== current) playPageTurnRef.current();
+      current = next;
+    };
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
     return () => {
@@ -122,8 +137,7 @@ export default function HeroStack() {
               <TextType
                 key={hero.intro.word}
                 text={hero.intro.word}
-                active={activeSlide === 0}
-                startDelay={typeDelay.current}
+                active={activeSlide === 0 && overlayDone}
               />
             </h2>
             <p className="mx-auto mt-6 max-w-lg font-sans text-base text-white/80 md:text-lg">

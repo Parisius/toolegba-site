@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import ClickSpark from "@/components/reactbits/ClickSpark";
-import GreetingIntro from "@/components/reactbits/GreetingIntro";
+import IntroSequence from "@/components/reactbits/IntroSequence";
 import PageTransition from "@/components/reactbits/PageTransition";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { LanguageProvider } from "@/lib/language/LanguageProvider";
+import { SoundProvider } from "@/lib/sound/SoundProvider";
+import { IntroOverlayProvider } from "@/lib/intro/IntroOverlayProvider";
 
 // Self-hosted brand fonts (from the charte graphique): League Spartan for
 // display/headline text, Poppins for body copy. Self-hosting avoids a
@@ -48,13 +50,17 @@ export default function RootLayout({
         className={`${leagueSpartan.variable} ${poppins.variable} font-sans antialiased`}
       >
         <LanguageProvider>
-          <GreetingIntro />
-          <PageTransition />
-          <ClickSpark />
-          <Header />
-          {children}
-          <Footer />
-          <ScrollToTop />
+          <SoundProvider>
+            <IntroOverlayProvider>
+              <IntroSequence />
+              <PageTransition />
+              <ClickSpark />
+              <Header />
+              {children}
+              <Footer />
+              <ScrollToTop />
+            </IntroOverlayProvider>
+          </SoundProvider>
         </LanguageProvider>
       </body>
     </html>
