@@ -4,20 +4,64 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, useReducedMotion } from "framer-motion";
 import { useLanguage, useDict } from "@/lib/language/LanguageProvider";
 import { useSound } from "@/lib/sound/SoundProvider";
 import { siteImages } from "@/lib/content";
 import GlassSurface from "@/components/reactbits/GlassSurface";
 
-/** Wavelength icon: animated-looking bars, dimmed and slashed through when muted. */
+// A single S-curve - one hump up, one hump down, like a hand-drawn squiggle -
+// rather than three small bumps. Each hump is a sample of
+// BASE_Y - AMPLITUDE*sin(t + phase), half a wavelength (180°) apart, so as t
+// advances the two arcs seesaw: one flattens through the baseline exactly as
+// the other reaches its extreme, a real traveling motion rather than both
+// moving together.
+const BASE_X = [3, 12, 21] as const;
+const HUMP_X = [7.5, 16.5] as const;
+const BASE_Y = 12;
+const AMPLITUDE = 6.5;
+const PHASE_STEP = Math.PI;
+const FRAME_COUNT = 18;
+// Starting phase chosen so the rest/idle frame shows a clean symmetric S
+// (one hump fully up, one fully down) instead of the flat line t=0 would give.
+const START_PHASE = Math.PI / 2;
+
+function waveFrame(t: number): string {
+  let d = `M${BASE_X[0]} ${BASE_Y}`;
+  HUMP_X.forEach((hx, i) => {
+    const y = (BASE_Y - Math.sin(t + i * PHASE_STEP) * AMPLITUDE).toFixed(2);
+    d += ` Q${hx} ${y} ${BASE_X[i + 1]} ${BASE_Y}`;
+  });
+  return d;
+}
+
+// One full cycle from START_PHASE, plus the starting frame repeated at the
+// end so the loop (constant angular speed, hence linear easing below) has
+// no seam.
+const WAVE_KEYFRAMES = Array.from({ length: FRAME_COUNT + 1 }, (_, i) =>
+  waveFrame(START_PHASE + (i / FRAME_COUNT) * Math.PI * 2),
+);
+const WAVE_REST = WAVE_KEYFRAMES[0];
+
+/** Wavelength icon: a single wave line that pulses continuously while sound is on, still and slashed through when muted. */
 function SoundWaveIcon({ on, className = "h-3.5 w-3.5" }: { on: boolean; className?: string }) {
+  const reduce = useReducedMotion();
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <path d="M4 10v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
-      <path d="M8.5 7v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
-      <path d="M13 4v16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.5} />
-      <path d="M17.5 7v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
-      <path d="M22 10v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity={on ? 1 : 0.35} />
+      <motion.path
+        d={WAVE_REST}
+        animate={on && !reduce ? { d: WAVE_KEYFRAMES } : { d: WAVE_REST }}
+        transition={
+          on && !reduce
+            ? { duration: 1.8, repeat: Infinity, ease: "linear" }
+            : { duration: 0.3 }
+        }
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity={on ? 1 : 0.4}
+      />
       {!on && <path d="M2.5 2.5 21.5 21.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />}
     </svg>
   );
